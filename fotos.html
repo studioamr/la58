@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · Fotos — SET 001</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .foto{position:relative;overflow:hidden;background:var(--noche2);border:1px solid var(--line)}
+  .foto img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .foto:hover img{transform:scale(1.03)}
+  .foto .pie{position:absolute;left:0;right:0;bottom:0;padding:30px 16px 12px;
+    background:linear-gradient(transparent,rgba(11,11,13,.92));
+    font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--azulejo)}
+  .foto .pie em{color:var(--rojo-vivo);font-style:normal}
+  .foto.grande{grid-column:span 2;grid-row:span 2}
+  @media(max-width:860px){.galeria{grid-template-columns:1fr 1fr}.foto.grande{grid-column:span 2;grid-row:span 1}}
+  @media(max-width:560px){.galeria{grid-template-columns:1fr}.foto.grande{grid-column:span 1}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="index.html">La marca</a>
+    <a href="logos.html">Logos</a>
+    <a href="menu.html">Menú</a>
+    <a href="fotos.html" class="on">Fotos</a>
+    <a href="campana.html">Campaña</a>
+  </nav>
+</div>
+
+<section class="page-head">
+  <div class="label">Fotografía de campaña</div>
+  <h1 class="display">SET <span class="neon">001</span>.</h1>
+  <p class="sub">Nueve fotos canónicas de la casa: producto, oficio y noche. Un solo canon: fondo negro texturizado,
+  luz cálida de tungsteno, talavera, y el rojo del neón como única firma. Para cajas de luz, menú, web y feed.</p>
+</section>
+
+<section style="padding-top:20px">
+  <div class="galeria">
+    <div class="foto grande rv"><img src="fotos/web/05-fachada.jpg" alt="Fachada nocturna con el letrero de neón LA 58 TAQUERÍA"><div class="pie">005 — LA FACHADA · <em>el letrero es el logo</em></div></div>
+    <div class="foto rv"><img src="fotos/web/01-el-velador.jpg" alt="El Velador: taco de costra de queso con pastor"><div class="pie">001 — EL VELADOR · <em>el taco de la casa</em></div></div>
+    <div class="foto rv"><img src="fotos/web/04-el-trompo.jpg" alt="El trompo de pastor con flama y cuchillo"><div class="pie">004 — EL TROMPO · <em>el oficio</em></div></div>
+    <div class="foto rv"><img src="fotos/web/02-trio-pastor.jpg" alt="Tres tacos de pastor en plato de talavera"><div class="pie">002 — PASTOR ×3 · <em>la base</em></div></div>
+    <div class="foto rv"><img src="fotos/web/03-la-madrugada.jpg" alt="Combo La Madrugada: 4 tacos, michelada y refresco de vidrio"><div class="pie">003 — LA MADRUGADA · <em>el combo insignia</em></div></div>
+    <div class="foto rv"><img src="fotos/web/06-michelada.jpg" alt="Michelada con escarchado de chile en barra de talavera"><div class="pie">006 — MICHELADA · <em>bebida fría</em></div></div>
+    <div class="foto rv"><img src="fotos/web/07-guacamole.jpg" alt="Guacamole de molcajete con totopos azules"><div class="pie">007 — GUACAMOLE · <em>para la mesa</em></div></div>
+    <div class="foto rv"><img src="fotos/web/08-costra-plancha.jpg" alt="Costra de queso dorándose en la plancha"><div class="pie">008 — LA COSTRA · <em>contenido del lunes</em></div></div>
+    <div class="foto rv"><img src="fotos/web/09-terraza.jpg" alt="Terraza de noche con el 58 encendido"><div class="pie">009 — LA TERRAZA · <em>la noche</em></div></div>
+  </div>
+  <p class="note rv">SET 001 GENERADO CON GEMINI (NANO BANANA 2) · MASTERS 2048×2048 EN <em>fotos/</em> · WEB 1200PX EN <em>fotos/web/</em> ·
+  USO: CAJAS DE LUZ, MENÚ IMPRESO, WEB, FEED · OJO: LLEVAN MARCA DE AGUA ✦ DE GEMINI EN LA ESQUINA — RECORTAR ANTES DE IMPRIMIR.</p>
+</section>
+
+<footer>
+  <div class="big rv">LA NOCHE YA<br>TIENE <span class="neon">FOTO</span>.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>SET 001 · 9 FOTOS</div>
+    <div>JUL 2026</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
