@@ -9,13 +9,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="brand.css">
 <style>
-  .item{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding:20px 0}
-  .item .nom{font-family:'Bebas Neue',sans-serif;font-size:27px;letter-spacing:.03em;text-transform:uppercase}
-  .item .desc{color:var(--humo);font-size:12.5px;line-height:1.7;margin-top:5px;max-width:520px}
-  .item .p{font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--rojo-vivo);white-space:nowrap}
-  .item.hero-item .nom{color:var(--rojo-vivo)}
-  .seccion-menu{margin-top:64px}
-  .aviso{border:1px solid var(--line);padding:22px 24px;margin-top:70px}
+  /* ——— MODO CARTA: el menú vive en luz (azulejo) con rojo Orinoco ——— */
+  body{background:#F7F5EF;color:#0B0B0D}
+  body::after{opacity:.03}
+  .topbar{background:linear-gradient(#F7F5EF 60%,transparent);color:#6b6a65}
+  .topbar b{color:#0B0B0D}
+  .topbar .dot{color:#E01F27}
+  .nav a{color:#6b6a65}
+  .nav a:hover,.nav a.on{color:#E01F27}
+  .page-head h1{color:#0B0B0D}
+  .page-head .neon{color:#E01F27;text-shadow:none}
+  .page-head .sub{color:#6b6a65}
+  .label{color:#E01F27}
+  .label::before{background:#E01F27}
+
+  .menu-sec{margin-top:56px}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:#fff;border:1.5px solid rgba(11,11,13,.12);overflow:hidden;display:flex;flex-direction:column}
+  .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+  .card .info{padding:16px 18px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .card .nom{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
+  .card .desc{color:#6b6a65;font-size:11.5px;line-height:1.6;padding:0 18px 16px;margin-top:-6px}
+  .card .p{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500;color:#E01F27;white-space:nowrap}
+  .card.hero{border:2px solid #E01F27}
+  .card.hero .nom{color:#E01F27}
+
+  .fila{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-bottom:1px dotted rgba(11,11,13,.25);padding:13px 2px}
+  .fila .nom{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.03em;text-transform:uppercase}
+  .fila .nota{color:#6b6a65;font-size:11px;margin-left:8px}
+  .fila .p{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;color:#E01F27;white-space:nowrap}
+
+  .aviso-carta{border:1.5px solid rgba(11,11,13,.15);background:#fff;padding:20px 22px;margin-top:60px}
+  .aviso-carta .note{color:#6b6a65}
+  .aviso-carta .note em{color:#E01F27}
+
+  footer{border-top:3px solid #0B0B0D}
+  footer .big{color:#0B0B0D}
+  footer .big span{color:#E01F27;text-shadow:none}
+  .foot-meta{color:#6b6a65}
+
+  @media(max-width:860px){.cards{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -34,68 +68,71 @@
 <section class="page-head">
   <div class="label">La carta</div>
   <h1 class="display">CORTO, PERFECTO<br>Y HASTA LAS <span class="neon">3 AM</span>.</h1>
-  <p class="sub">Trompo y plancha, a la vista. Carne mate con quemadito, tortilla con grasita, porciones honestas —
-  como se sirve un taco de verdad. Salsas y cebollas asadas van aparte, en la mesa.</p>
+  <p class="sub">Trompo y plancha, a la vista. Todo se sirve en charola de acero sobre la barra de azulejo —
+  salsas de molcajete y cebollas asadas en la mesa, sin costo.</p>
 </section>
 
-<section style="padding-top:20px">
+<section style="padding-top:10px">
 
-  <div class="seccion-menu rv">
+  <div class="menu-sec rv">
     <div class="label">Del trompo</div>
-    <div class="item"><div><div class="nom">Pastor</div><div class="desc">Del trompo a la vista, picado fino con quemadito y piña tatemada. Tortilla hecha a mano.</div></div><div class="p">$32*</div></div>
-    <div class="item hero-item"><div><div class="nom">El Velador</div><div class="desc">El taco de la casa: costra de queso dorada bajo el pastor. El que cuida tu noche.</div></div><div class="p">$55*</div></div>
+    <div class="cards">
+      <div class="card"><img src="fotos/menu/web/p-pastor.jpg" alt="Tacos de pastor"><div class="info"><span class="nom">Pastor</span><span class="p">$32*</span></div><div class="desc">Picado fino con quemadito, piña tatemada, tortilla hecha a mano.</div></div>
+      <div class="card hero"><img src="fotos/menu/web/p-velador.jpg" alt="El Velador"><div class="info"><span class="nom">El Velador</span><span class="p">$55*</span></div><div class="desc">El taco de la casa: costra de queso dorada bajo el pastor. El que cuida tu noche.</div></div>
+      <div class="card hero"><img src="fotos/web/03-la-madrugada.jpg" alt="La Madrugada"><div class="info"><span class="nom">La Madrugada</span><span class="p">$149*</span></div><div class="desc">El combo insignia: 4 tacos del trompo + agua de sabor o refresco de vidrio.</div></div>
+    </div>
   </div>
 
-  <div class="seccion-menu rv">
+  <div class="menu-sec rv">
     <div class="label">De la plancha</div>
-    <div class="item"><div><div class="nom">Bistec</div><div class="desc">Res picada al momento sobre la plancha.</div></div><div class="p">$38*</div></div>
-    <div class="item"><div><div class="nom">Arrachera</div><div class="desc">Tiras de arrachera selladas con su quemadito. La reina de la casa.</div></div><div class="p">$48*</div></div>
-    <div class="item"><div><div class="nom">Filete</div><div class="desc">Tiras de filete de res, suave y limpio.</div></div><div class="p">$48*</div></div>
-    <div class="item"><div><div class="nom">Campechano</div><div class="desc">Bistec + chorizo. El clásico de los que no se deciden.</div></div><div class="p">$45*</div></div>
+    <div class="cards">
+      <div class="card"><img src="fotos/menu/web/p-bistec.jpg" alt="Taco de bistec"><div class="info"><span class="nom">Bistec</span><span class="p">$38*</span></div><div class="desc">Res picada al momento sobre la plancha, cebolla y cilantro.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-arrachera.jpg" alt="Taco de arrachera"><div class="info"><span class="nom">Arrachera</span><span class="p">$48*</span></div><div class="desc">Tiras selladas con su quemadito. La reina de la casa.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-orden-bistec.jpg" alt="Orden de bistec"><div class="info"><span class="nom">Orden de bistec</span><span class="p">$145*</span></div><div class="desc">Tiras de bistec bajo queso fundido, cebollitas tatemadas y tortillas a mano. Para compartir.</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fila"><span class="nom">Filete <span class="nota">tiras de filete de res, suave y limpio</span></span><span class="p">$48*</span></div>
+      <div class="fila"><span class="nom">Campechano <span class="nota">bistec + chorizo</span></span><span class="p">$45*</span></div>
+      <div class="fila"><span class="nom">Orden de arrachera <span class="nota">con cebollas caramelizadas + tortillas a mano</span></span><span class="p">$185*</span></div>
+    </div>
   </div>
 
-  <div class="seccion-menu rv">
+  <div class="menu-sec rv">
     <div class="label">Con queso</div>
-    <div class="item"><div><div class="nom">Quesadilla</div><div class="desc">Tortilla de maíz con queso fundido y tu carne: bistec o arrachera.</div></div><div class="p">$48 / $58*</div></div>
-    <div class="item"><div><div class="nom">La Diabla</div><div class="desc">Doble tortilla de harina dorada en plancha, queso fundido y carne. Bistec o arrachera.</div></div><div class="p">$62 / $72*</div></div>
+    <div class="cards">
+      <div class="card"><img src="fotos/menu/web/p-quesadilla.jpg" alt="Quesadilla"><div class="info"><span class="nom">Quesadilla</span><span class="p">$48 / $58*</span></div><div class="desc">Tortilla de maíz dorada con queso fundido y tu carne: bistec o arrachera.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-diabla.jpg" alt="La Diabla"><div class="info"><span class="nom">La Diabla</span><span class="p">$62 / $72*</span></div><div class="desc">Doble tortilla de harina dorada en plancha, queso fundido y carne. Bistec o arrachera.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-frijoles.jpg" alt="Frijoles charros"><div class="info"><span class="nom">Frijoles charros</span><span class="p">$55*</span></div><div class="desc">Caldosos, con tocino, chorizo y chile verde.</div></div>
+    </div>
   </div>
 
-  <div class="seccion-menu rv">
-    <div class="label">Órdenes — para compartir</div>
-    <div class="item"><div><div class="nom">Orden de bistec</div><div class="desc">Con cebollas caramelizadas y tortillas hechas a mano.</div></div><div class="p">$145*</div></div>
-    <div class="item"><div><div class="nom">Orden de arrachera</div><div class="desc">Con cebollas caramelizadas y tortillas hechas a mano.</div></div><div class="p">$185*</div></div>
-  </div>
-
-  <div class="seccion-menu rv">
-    <div class="label">El combo insignia</div>
-    <div class="item hero-item"><div><div class="nom">La Madrugada</div><div class="desc">4 tacos del trompo + refresco de vidrio o michelada. Para el bajón, con estilo.</div></div><div class="p">$149*</div></div>
-  </div>
-
-  <div class="seccion-menu rv">
-    <div class="label">Para la mesa</div>
-    <div class="item"><div><div class="nom">Guacamole de molcajete</div><div class="desc">Con totopos de maíz azul.</div></div><div class="p">$75*</div></div>
-    <div class="item"><div><div class="nom">Cebollitas y chiles toreados</div><div class="desc">Al carbón, con limón y sal de grano.</div></div><div class="p">$35*</div></div>
-    <div class="item"><div><div class="nom">Frijoles charros</div><div class="desc">Con tocino, chorizo y chile verde.</div></div><div class="p">$55*</div></div>
-  </div>
-
-  <div class="seccion-menu rv">
+  <div class="menu-sec rv">
     <div class="label">Bebida fría</div>
-    <div class="item"><div><div class="nom">Michelada de la casa</div><div class="desc">Escarchado de sal-chile, mezcla secreta, cerveza bien muerta de frío.</div></div><div class="p">$70*</div></div>
-    <div class="item"><div><div class="nom">Cerveza</div><div class="desc">Nacional, en su punto de hielo.</div></div><div class="p">$40*</div></div>
-    <div class="item"><div><div class="nom">Refresco de vidrio</div><div class="desc">Coca de vidrio bien fría, como debe ser.</div></div><div class="p">$28*</div></div>
-    <div class="item"><div><div class="nom">Agua del día</div><div class="desc">De horchata o jamaica, hecha en casa.</div></div><div class="p">$30*</div></div>
+    <div class="cards">
+      <div class="card"><img src="fotos/menu/web/p-aguas.jpg" alt="Aguas de sabor en vaso de metal"><div class="info"><span class="nom">Aguas del día</span><span class="p">$30*</span></div><div class="desc">Jamaica u horchata hechas en casa, servidas en vaso de metal bien frío.</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fila"><span class="nom">Refresco de vidrio <span class="nota">coca bien fría, como debe ser</span></span><span class="p">$28*</span></div>
+      <div class="fila"><span class="nom">Cerveza nacional <span class="nota">en su punto de hielo</span></span><span class="p">$40*</span></div>
+    </div>
   </div>
 
-  <div class="aviso rv">
-    <p class="note" style="margin-top:0">*PRECIOS PROPUESTOS CALIBRADOS A LA REALIDAD DE MORELIA — BENCHMARK: LA TAQUERÍA PREMIUM LOCAL VENDE
-    TACO $42–74 Y ORDEN $165–250 EN RAPPI. <em>PENDIENTE VALIDAR CON COCO</em> CONTRA COSTOS REALES DE INSUMO.<br>
-    MENÚ PDF PARA IMPRIMIR + QR DE MESA: <em>EN EL REPO (menu-la58.pdf · assets/qr-menu.png)</em>.</p>
+  <div class="menu-sec rv">
+    <div class="label">Para la mesa</div>
+    <div class="fila"><span class="nom">Guacamole de molcajete <span class="nota">con totopos de maíz azul</span></span><span class="p">$75*</span></div>
+    <div class="fila"><span class="nom">Cebollitas y chiles toreados <span class="nota">al carbón, con limón y sal de grano</span></span><span class="p">$35*</span></div>
+  </div>
+
+  <div class="aviso-carta rv">
+    <p class="note" style="margin-top:0">*PRECIOS PROPUESTOS CALIBRADOS A MORELIA (BENCHMARK: LA PREMIUM LOCAL VENDE TACO $42–74 EN RAPPI) —
+    <em>PENDIENTE VALIDAR CON COCO</em> CONTRA COSTOS REALES.<br>
+    CARTA IMPRIMIBLE: <em>menu-la58.pdf</em> · QR DE MESA: <em>assets/qr-menu.png</em></p>
   </div>
 
 </section>
 
 <footer>
-  <div class="big rv">EL ÚLTIMO TACO<br>ES DE <span class="neon">LA 58</span>.</div>
+  <div class="big rv">EL ÚLTIMO TACO<br>ES DE <span>LA 58</span>.</div>
   <div class="foot-meta">
     <div>LA 58 · TAQUERÍA</div>
     <div>BUCARELI 290 · MORELIA</div>
@@ -104,7 +141,7 @@
 </footer>
 
 <script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 </script>
 </body>
