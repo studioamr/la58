@@ -12,17 +12,18 @@
 <link rel="stylesheet" href="brand.css">
 <style>
   /* ——— hero: la fachada ——— */
-  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;position:relative}
+  .hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 70px;position:relative}
+  .hero-stage{border-radius:16px;padding:clamp(30px,5vw,60px) clamp(30px,6vw,80px)}
   .letrero{
     display:inline-flex;flex-direction:column;align-items:center;gap:0;
-    padding:clamp(28px,5vw,54px) clamp(40px,7vw,90px);
+    padding:clamp(24px,4vw,44px) clamp(36px,6vw,80px);
     border-radius:10px;position:relative;
   }
-  .letrero .la{font-size:clamp(28px,4vw,52px);letter-spacing:.34em;margin-right:-.34em;color:var(--azulejo)}
-  .letrero .num{font-size:clamp(140px,26vw,330px);line-height:.86}
+  .letrero .la{font-size:clamp(24px,3.5vw,44px);letter-spacing:.34em;margin-right:-.34em;color:#F4F1E8}
+  .letrero .num{font-size:clamp(120px,22vw,280px);line-height:.86}
   .letrero .taq{
-    font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,1.6vw,15px);
-    letter-spacing:.58em;margin-right:-.58em;color:var(--azulejo);margin-top:18px;text-transform:uppercase;
+    font-family:'IBM Plex Mono',monospace;font-size:clamp(10px,1.4vw,14px);
+    letter-spacing:.58em;margin-right:-.58em;color:#F4F1E8;margin-top:16px;text-transform:uppercase;
   }
   .hero .tag{margin-top:44px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--humo)}
   .hero .tag em{color:var(--rojo-vivo);font-style:normal}
@@ -72,10 +73,12 @@
 
 <!-- ═══════════ HERO: EL LETRERO ═══════════ -->
 <div class="hero">
-  <div class="letrero neon-borde parpadea">
-    <div class="la display neon">LA</div>
-    <div class="num display neon">58</div>
-    <div class="taq">TAQUERÍA</div>
+  <div class="hero-stage stage-noche">
+    <div class="letrero neon-borde parpadea">
+      <div class="la display">LA</div>
+      <div class="num display neon">58</div>
+      <div class="taq">TAQUERÍA</div>
+    </div>
   </div>
   <div class="tag">BUCARELI 290 · MORELIA — <em>EL ÚLTIMO TACO DE LA NOCHE</em></div>
   <div class="scroll">▼</div>
@@ -165,10 +168,10 @@
 <section>
   <div class="label">05 — Paleta y tipografía</div>
   <div class="grid-4 rv">
-    <div class="sw" style="background:#0B0B0D;color:#8E8C86;border:1px solid rgba(244,241,232,.13)">NOCHE #0B0B0D</div>
-    <div class="sw" style="background:#F4F1E8;color:#0B0B0D">AZULEJO #F4F1E8</div>
-    <div class="sw" style="background:#FF2B33;color:#0B0B0D">ROJO NEÓN #FF2B33</div>
-    <div class="sw" style="background:#8E8C86;color:#0B0B0D">HUMO #8E8C86</div>
+    <div class="sw" style="background:#F7F5EF;color:#6b6a65;border:1px solid rgba(11,11,13,.15)">AZULEJO #F7F5EF</div>
+    <div class="sw" style="background:#141412;color:#F4F1E8">TINTA #141412</div>
+    <div class="sw" style="background:#E01F27;color:#fff">ROJO #E01F27</div>
+    <div class="sw" style="background:#FF2B33;color:#0B0B0D">NEÓN (SOLO DE NOCHE) #FF2B33</div>
   </div>
   <div class="grid-2" style="margin-top:1px">
     <div class="cell rv">
@@ -180,7 +183,7 @@
       <div class="cap" style="margin-top:10px">META — etiquetas, precios, datos, tickets. La voz de máquina registradora. Cuerpo: <em>INTER</em>.</div>
     </div>
   </div>
-  <p class="note rv">REGLA DE ORO: <em>UN SOLO ACENTO</em>. SI ALGO MÁS QUIERE SER ROJO, ALGO MÁS ESTÁ MAL.</p>
+  <p class="note rv">REGLA DE ORO: <em>UN SOLO ACENTO</em>. LA MARCA VIVE EN CLARO (AZULEJO + TINTA + ROJO); EL NEÓN BRILLA <em>SOLO DE NOCHE</em> — EN EL LETRERO Y LA FACHADA.</p>
 </section>
 
 <!-- ═══════════ LA CASA ═══════════ -->

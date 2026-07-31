@@ -1,13 +1,14 @@
-/* LA 58 · TAQUERÍA — sistema compartido */
-/* Código: fachada oscura · neón rojo (la firma) · azulejo · mono de rótulo */
+/* LA 58 · TAQUERÍA — sistema compartido V2 (claro-primero) */
+/* Azulejo claro + tinta + UN acento rojo. El neón vive solo en escenarios .stage-noche. */
 :root{
-  --noche:#0B0B0D;
-  --noche2:#121214;
-  --azulejo:#F4F1E8;
-  --humo:#8E8C86;
-  --rojo:#FF2B33;
-  --rojo-vivo:#FF4048;
-  --line:rgba(244,241,232,.13);
+  --noche:#F7F5EF;        /* fondo base (azulejo claro) */
+  --noche2:#FFFFFF;       /* tarjetas */
+  --azulejo:#141412;      /* tinta (texto principal) */
+  --humo:#6b6a65;         /* texto secundario */
+  --rojo:#E01F27;         /* acento rojo tinta */
+  --rojo-vivo:#E01F27;
+  --line:rgba(11,11,13,.15);
+  --negro:#0B0B0D;        /* solo para escenarios de noche/letrero */
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -18,29 +19,31 @@ body{
   -webkit-font-smoothing:antialiased;
   overflow-x:hidden;
 }
-::selection{background:var(--rojo);color:var(--noche)}
+::selection{background:var(--rojo);color:#fff}
 .mono{font-family:'IBM Plex Mono',monospace}
 .display{font-family:'Bebas Neue',sans-serif;text-transform:uppercase;line-height:.9;letter-spacing:.015em}
 
-/* grano de fachada */
+/* grano sutil de papel */
 body::after{
-  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.055;
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:999;opacity:.035;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
 }
 
-/* el neón: la única luz permitida. Tubo encendido, no arcoíris. */
-.neon{
-  color:var(--rojo-vivo);
+/* el rojo en claro es TINTA: plano, sin glow */
+.neon{color:var(--rojo);text-shadow:none}
+.neon-borde{border:1.5px solid var(--rojo);box-shadow:none}
+
+/* escenario de noche: el único lugar donde el neón brilla */
+.stage-noche{background:var(--negro);color:#F4F1E8}
+.stage-noche .neon{
+  color:#FF4048;
   text-shadow:0 0 5px rgba(255,43,51,.6),0 0 22px rgba(255,43,51,.32),0 0 60px rgba(255,43,51,.16);
 }
-.neon-borde{
-  border:1.5px solid var(--rojo);
+.stage-noche .neon-borde{
+  border:1.5px solid #FF2B33;
   box-shadow:0 0 10px rgba(255,43,51,.35),inset 0 0 10px rgba(255,43,51,.18);
 }
-@keyframes parpadeo{
-  0%,92%,96%,100%{opacity:1}
-  93%,95%{opacity:.55}
-}
+@keyframes parpadeo{0%,92%,96%,100%{opacity:1}93%,95%{opacity:.55}}
 .parpadea{animation:parpadeo 7s linear infinite}
 
 .topbar{
@@ -48,17 +51,17 @@ body::after{
   display:flex;justify-content:space-between;align-items:center;gap:12px;
   padding:14px 28px;font-size:11px;letter-spacing:.14em;
   color:var(--humo);text-transform:uppercase;
-  background:linear-gradient(var(--noche) 60%,transparent);
+  background:linear-gradient(var(--noche) 65%,transparent);
   font-family:'IBM Plex Mono',monospace;
 }
 .topbar b{color:var(--azulejo);font-weight:500}
 .topbar .dot{color:var(--rojo)}
 .nav{display:flex;gap:18px;flex-wrap:wrap}
 .nav a{color:var(--humo);text-decoration:none;font-size:10.5px;letter-spacing:.14em;transition:.2s}
-.nav a:hover{color:var(--rojo-vivo)}
-.nav a.on{color:var(--rojo-vivo)}
+.nav a:hover{color:var(--rojo)}
+.nav a.on{color:var(--rojo)}
 
-section{max-width:1200px;margin:0 auto;padding:100px 28px}
+section{max-width:1200px;margin:0 auto;padding:90px 28px}
 .page-head{padding-top:150px;padding-bottom:30px}
 .page-head h1{font-size:clamp(52px,9vw,120px)}
 .page-head .sub{color:var(--humo);font-size:14px;margin-top:18px;max-width:560px;line-height:1.7}
@@ -69,39 +72,37 @@ section{max-width:1200px;margin:0 auto;padding:100px 28px}
 }
 .label::before{content:"";display:inline-block;width:26px;height:1px;background:var(--rojo);vertical-align:middle;margin-right:12px}
 
-/* caja de luz: la foto de menú retroiluminada */
 .caja-luz{
-  background:var(--azulejo);color:var(--noche);padding:34px;position:relative;
-  box-shadow:0 0 34px rgba(244,241,232,.09);
+  background:#fff;color:var(--azulejo);padding:34px;position:relative;
+  border:1px solid var(--line);
 }
-.caja-luz .serial{position:absolute;top:12px;left:14px;font-size:9.5px;letter-spacing:.18em;color:rgba(11,11,13,.5);font-family:'IBM Plex Mono',monospace;text-transform:uppercase}
+.caja-luz .serial{position:absolute;top:12px;left:14px;font-size:9.5px;letter-spacing:.18em;color:var(--humo);font-family:'IBM Plex Mono',monospace;text-transform:uppercase}
 
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line)}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.cell{background:var(--noche);padding:28px}
+.cell{background:var(--noche2);padding:28px}
 .cell .cap{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:var(--humo);text-transform:uppercase;margin-top:16px;line-height:1.8}
-.cell .cap em{color:var(--rojo-vivo);font-style:normal}
+.cell .cap em{color:var(--rojo);font-style:normal}
 .cell h3{font-family:'Bebas Neue',sans-serif;font-size:24px;text-transform:uppercase;margin-top:12px;letter-spacing:.03em}
 
 .note{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--humo);margin-top:24px;letter-spacing:.08em;line-height:1.9}
-.note em{color:var(--rojo-vivo);font-style:normal}
+.note em{color:var(--rojo);font-style:normal}
 
-.precio{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--rojo-vivo);letter-spacing:.06em}
+.precio{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--rojo);letter-spacing:.06em}
 
-.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:16px 0;white-space:nowrap;background:#fff}
 .marquee-inner{display:inline-block;animation:mq 26s linear infinite;font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.08em;color:var(--humo);text-transform:uppercase}
-.marquee-inner em{color:var(--rojo-vivo);font-style:normal;margin:0 22px}
+.marquee-inner em{color:var(--rojo);font-style:normal;margin:0 22px}
 @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-footer{border-top:1px solid var(--line);padding:60px 28px 40px;max-width:1200px;margin:60px auto 0}
+footer{border-top:3px solid var(--azulejo);padding:60px 28px 40px;max-width:1200px;margin:60px auto 0}
 footer .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,7.5vw,92px);text-transform:uppercase;line-height:.95}
-footer .big span{color:var(--rojo-vivo)}
+footer .big span{color:var(--rojo)}
 .foot-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:44px;
   font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--humo);letter-spacing:.14em;text-transform:uppercase}
 
-.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
-.rv.on{opacity:1;transform:none}
+.rv{opacity:1;transform:none}
 
 @media(max-width:860px){
   .grid-3,.grid-4{grid-template-columns:1fr 1fr}

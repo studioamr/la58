@@ -23,8 +23,11 @@
   .page-head .sub{color:#6b6a65}
   .label{color:#E01F27}
   .label::before{background:#E01F27}
-  .menu-sec{margin-top:56px}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  /* HOJA tipo PDF: carta centrada, estática */
+  section{max-width:940px}
+  .page-head{max-width:940px}
+  .menu-sec{margin-top:46px}
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
   .card{background:#fff;border:1.5px solid rgba(11,11,13,.12);overflow:hidden;display:flex;flex-direction:column}
   .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
   .card .info{padding:16px 18px 6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
@@ -158,9 +161,5 @@
   </div>
 </footer>
 
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.08});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-</script>
 </body>
 </html>
