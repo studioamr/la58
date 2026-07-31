@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · Menú — Tacos hasta las 3 AM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .item{display:flex;justify-content:space-between;align-items:baseline;gap:18px;border-bottom:1px solid var(--line);padding:20px 0}
+  .item .nom{font-family:'Bebas Neue',sans-serif;font-size:27px;letter-spacing:.03em;text-transform:uppercase}
+  .item .desc{color:var(--humo);font-size:12.5px;line-height:1.7;margin-top:5px;max-width:520px}
+  .item .p{font-family:'IBM Plex Mono',monospace;font-size:15px;color:var(--rojo-vivo);white-space:nowrap}
+  .item.hero-item .nom{color:var(--rojo-vivo)}
+  .seccion-menu{margin-top:64px}
+  .aviso{border:1px solid var(--line);padding:22px 24px;margin-top:70px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="index.html">La marca</a>
+    <a href="logos.html">Logos</a>
+    <a href="menu.html" class="on">Menú</a>
+    <a href="campana.html">Campaña</a>
+  </nav>
+</div>
+
+<section class="page-head">
+  <div class="label">La carta</div>
+  <h1 class="display">CORTO, PERFECTO<br>Y HASTA LAS <span class="neon">3 AM</span>.</h1>
+  <p class="sub">Tres proteínas, dos especialidades de la casa y bebida bien fría. Las mejores taquerías del país
+  trabajan con menú corto — nosotros también. Todo del trompo y la plancha, a la vista.</p>
+</section>
+
+<section style="padding-top:20px">
+
+  <div class="seccion-menu rv">
+    <div class="label">Del trompo y la plancha</div>
+    <div class="item"><div><div class="nom">Pastor</div><div class="desc">Del trompo a la vista, con piña, cebolla y cilantro. Tortilla hecha a mano.</div></div><div class="p">$32*</div></div>
+    <div class="item"><div><div class="nom">Asada</div><div class="desc">Bistec de res a la plancha, sellado al momento.</div></div><div class="p">$35*</div></div>
+    <div class="item"><div><div class="nom">Costilla</div><div class="desc">Costilla de res dorada, deshuesada al momento sobre la plancha.</div></div><div class="p">$48*</div></div>
+    <div class="item"><div><div class="nom">Campechano</div><div class="desc">Asada + chorizo. El clásico de los que no se deciden.</div></div><div class="p">$45*</div></div>
+  </div>
+
+  <div class="seccion-menu rv">
+    <div class="label">Las especialidades de la casa</div>
+    <div class="item hero-item"><div><div class="nom">El Velador</div><div class="desc">El taco de la casa: costra de queso dorada en plancha, pastor del trompo, piña tatemada y salsa de la casa. El que cuida tu noche.</div></div><div class="p">$52*</div></div>
+    <div class="item hero-item"><div><div class="nom">La Madrugada</div><div class="desc">El combo insignia: 4 tacos del trompo + refresco de vidrio o michelada.</div></div><div class="p">$149*</div></div>
+  </div>
+
+  <div class="seccion-menu rv">
+    <div class="label">Para la mesa</div>
+    <div class="item"><div><div class="nom">Guacamole de molcajete</div><div class="desc">Con totopos de maíz azul.</div></div><div class="p">$75*</div></div>
+    <div class="item"><div><div class="nom">Cebollitas y chiles toreados</div><div class="desc">Al carbón, con limón y sal de grano.</div></div><div class="p">$35*</div></div>
+    <div class="item"><div><div class="nom">Frijoles de la olla</div><div class="desc">Con queso Cotija y totopo.</div></div><div class="p">$40*</div></div>
+  </div>
+
+  <div class="seccion-menu rv">
+    <div class="label">Bebida fría</div>
+    <div class="item"><div><div class="nom">Michelada de la casa</div><div class="desc">Escarchado de sal-chile, mezcla secreta, cerveza bien muerta de frío.</div></div><div class="p">$70*</div></div>
+    <div class="item"><div><div class="nom">Cerveza</div><div class="desc">Nacional, en su punto de hielo.</div></div><div class="p">$40*</div></div>
+    <div class="item"><div><div class="nom">Refresco de vidrio</div><div class="desc">Coca de vidrio bien fría, como debe ser.</div></div><div class="p">$28*</div></div>
+    <div class="item"><div><div class="nom">Agua del día</div><div class="desc">De horchata o jamaica, hecha en casa.</div></div><div class="p">$30*</div></div>
+  </div>
+
+  <div class="aviso rv">
+    <p class="note" style="margin-top:0">*TODOS LOS PRECIOS SON <em>PROPUESTA CALIBRADA AL BARRIO</em> (BASE $30–38 · ESPECIALIDAD $45–55 · TICKET OBJETIVO $150–250 P/P) —
+    <em>PENDIENTE VALIDAR CON COCO</em> CONTRA COSTOS REALES DE INSUMO ANTES DE IMPRIMIR.<br>
+    VERSIONES PDF + QR PARA MESA: EN PRODUCCIÓN.</p>
+  </div>
+
+</section>
+
+<footer>
+  <div class="big rv">EL ÚLTIMO TACO<br>ES DE <span class="neon">LA 58</span>.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>BUCARELI 290 · MORELIA</div>
+    <div>JUE–SÁB HASTA LAS 3 AM</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

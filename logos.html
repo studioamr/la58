@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · Logos — El letrero y sus reglas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .mini-letrero{
+    display:inline-flex;flex-direction:column;align-items:center;
+    padding:26px 44px;border-radius:8px;
+  }
+  .mini-letrero .la{font-size:22px;letter-spacing:.34em;margin-right:-.34em;color:var(--azulejo)}
+  .mini-letrero .num{font-size:110px;line-height:.88}
+  .mini-letrero .taq{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.5em;margin-right:-.5em;color:var(--azulejo);margin-top:10px;text-transform:uppercase}
+
+  .lock-h{display:inline-flex;align-items:baseline;gap:14px}
+  .lock-h .n{font-size:64px}
+  .lock-h .t{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--azulejo)}
+
+  .avatar{width:120px;height:120px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0}
+  .avatar .n{font-size:52px;line-height:1}
+
+  .stage{background:var(--noche2);border:1px solid var(--line);padding:56px 28px;display:flex;align-items:center;justify-content:center;min-height:240px}
+  .stage.claro{background:var(--azulejo)}
+  .stage.claro .la,.stage.claro .taq{color:#0B0B0D !important}
+
+  /* versión tinta (impresión): rojo plano, sin glow */
+  .tinta .neon{color:var(--rojo);text-shadow:none}
+  .tinta.neon-borde,.tinta .neon-borde{box-shadow:none;border-color:var(--rojo)}
+
+  .no{position:relative}
+  .no::after{content:"";position:absolute;inset:0;background:linear-gradient(to top left,transparent 48.6%,var(--rojo) 49.4%,var(--rojo) 50.6%,transparent 51.4%)}
+
+  .spec{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--humo);letter-spacing:.1em;line-height:2;text-transform:uppercase}
+  .spec em{color:var(--rojo-vivo);font-style:normal}
+
+  .fachada{
+    background:#0D0D0F;border:1px solid var(--line);min-height:340px;position:relative;overflow:hidden;
+    display:flex;align-items:center;justify-content:center;
+    background-image:radial-gradient(ellipse 60% 45% at 50% 42%,rgba(255,43,51,.10),transparent 70%);
+  }
+  .fachada .piso{position:absolute;bottom:0;left:0;right:0;height:54px;background:#0A0A0B;border-top:1px solid rgba(244,241,232,.07)}
+  .fachada .puerta{position:absolute;bottom:54px;right:12%;width:74px;height:120px;border:1px solid rgba(244,241,232,.1);background:rgba(244,241,232,.02)}
+  .fachada .foquitos{position:absolute;top:26px;left:8%;right:8%;height:1px;border-top:1px dashed rgba(244,241,232,.14)}
+  .fachada .foquitos i{position:absolute;top:-3px;width:5px;height:5px;border-radius:50%;background:#FFD9A0;opacity:.75;box-shadow:0 0 8px rgba(255,217,160,.5)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="index.html">La marca</a>
+    <a href="logos.html" class="on">Logos</a>
+    <a href="menu.html">Menú</a>
+    <a href="campana.html">Campaña</a>
+  </nav>
+</div>
+
+<section class="page-head">
+  <div class="label">Sistema de identidad</div>
+  <h1 class="display">EL LETRERO<br>Y SUS <span class="neon">REGLAS</span>.</h1>
+  <p class="sub">El logo de LA 58 no es un dibujo: es un letrero de neón. De día está apagado y manda la tinta;
+  de noche se enciende y manda él. Todo lo demás de la marca se agacha para que el 58 brille.</p>
+</section>
+
+<!-- ═══════════ PRIMARIO ═══════════ -->
+<section>
+  <div class="label">01 — Marca primaria: la caja de neón</div>
+  <div class="grid-2">
+    <div class="stage rv">
+      <div class="mini-letrero neon-borde">
+        <div class="la display neon">LA</div>
+        <div class="num display neon">58</div>
+        <div class="taq">TAQUERÍA</div>
+      </div>
+    </div>
+    <div class="cell rv" style="display:flex;flex-direction:column;justify-content:center">
+      <div class="spec">
+        CONSTRUCCIÓN<br>
+        — MARCO: TUBO CONTINUO, ESQUINAS RADIO 8<br>
+        — "LA": BEBAS NEUE, TRACKING 340, BLANCO CÁLIDO<br>
+        — "58": BEBAS NEUE, 5× LA ALTURA DE "LA", <em>ROJO NEÓN #FF2B33</em><br>
+        — "TAQUERÍA": PLEX MONO, TRACKING 500, NUNCA EN ROJO<br>
+        — AIRE MÍNIMO ALREDEDOR: EL ANCHO DEL "5"<br>
+        — DOS TEMPERATURAS DE LUZ Y NADA MÁS: <em>BLANCO CÁLIDO + ROJO</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LOCKUPS ═══════════ -->
+<section>
+  <div class="label">02 — Lockups</div>
+  <div class="grid-3">
+    <div class="cell rv" style="text-align:center;padding:44px 20px">
+      <div class="lock-h"><span class="display neon n">LA 58</span><span class="t">TAQUERÍA</span></div>
+      <div class="cap" style="margin-top:22px">HORIZONTAL — encabezados, web, ticket de venta</div>
+    </div>
+    <div class="cell rv" style="text-align:center;padding:44px 20px">
+      <div class="display neon" style="font-size:88px;line-height:.9">58</div>
+      <div class="cap" style="margin-top:18px">EL NUMERAL — sello, sticker, marca de agua, servilleta</div>
+    </div>
+    <div class="cell rv" style="text-align:center;padding:44px 20px;display:flex;flex-direction:column;align-items:center">
+      <div class="avatar neon-borde"><span class="display neon n">58</span></div>
+      <div class="cap" style="margin-top:18px">AVATAR — Instagram, WhatsApp, Google Maps</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ENCENDIDO / APAGADO ═══════════ -->
+<section>
+  <div class="label">03 — Encendido y apagado</div>
+  <div class="grid-2">
+    <div class="stage rv">
+      <div class="mini-letrero neon-borde parpadea">
+        <div class="la display neon">LA</div>
+        <div class="num display neon">58</div>
+        <div class="taq">TAQUERÍA</div>
+      </div>
+    </div>
+    <div class="stage claro tinta rv">
+      <div class="mini-letrero neon-borde">
+        <div class="la display">LA</div>
+        <div class="num display neon">58</div>
+        <div class="taq">TAQUERÍA</div>
+      </div>
+    </div>
+  </div>
+  <p class="note rv">IZQUIERDA: <em>ENCENDIDO</em> — PANTALLAS Y NOCHE, CON GLOW. DERECHA: <em>APAGADO (TINTA)</em> — IMPRESIÓN, MENÚ, EMPAQUE:
+  ROJO PLANO SIN GLOW SOBRE AZULEJO. EL GLOW SOLO EXISTE DONDE HAY LUZ REAL O PANTALLA.</p>
+</section>
+
+<!-- ═══════════ PROHIBICIONES ═══════════ -->
+<section>
+  <div class="label">04 — Prohibiciones</div>
+  <div class="grid-4">
+    <div class="cell no rv" style="text-align:center;padding:34px 16px"><div class="display" style="font-size:44px;color:#3FA9F5">58</div><div class="cap">OTRO COLOR — el neón es rojo o no es</div></div>
+    <div class="cell no rv" style="text-align:center;padding:34px 16px"><div class="display" style="font-size:44px;background:linear-gradient(90deg,#FF2B33,#FF8A3C,#FFD93C);-webkit-background-clip:text;background-clip:text;color:transparent">58</div><div class="cap">GRADIENTES — esto no es cantina de aeropuerto</div></div>
+    <div class="cell no rv" style="text-align:center;padding:34px 16px"><div class="display" style="font-size:44px;transform:rotate(-12deg);color:var(--rojo)">58</div><div class="cap">ROTAR O DEFORMAR el numeral</div></div>
+    <div class="cell no rv" style="text-align:center;padding:34px 16px"><div style="font-family:Georgia,serif;font-size:40px;color:var(--rojo)">58</div><div class="cap">OTRA TIPOGRAFÍA — Bebas o nada</div></div>
+  </div>
+  <p class="note rv">Y LA REGLA MADRE: <em>UN SOLO ACENTO.</em> SI ALGO MÁS QUIERE SER ROJO, ALGO MÁS ESTÁ MAL.</p>
+</section>
+
+<!-- ═══════════ LA FACHADA ═══════════ -->
+<section>
+  <div class="label">05 — Aplicación reina: la fachada</div>
+  <div class="fachada rv">
+    <div class="foquitos"><i style="left:6%"></i><i style="left:20%"></i><i style="left:34%"></i><i style="left:48%"></i><i style="left:62%"></i><i style="left:76%"></i><i style="left:90%"></i></div>
+    <div class="mini-letrero neon-borde parpadea" style="transform:scale(.92)">
+      <div class="la display neon">LA</div>
+      <div class="num display neon">58</div>
+      <div class="taq">TAQUERÍA</div>
+    </div>
+    <div class="puerta"></div>
+    <div class="piso"></div>
+  </div>
+  <p class="note rv">MURO CASI NEGRO TEXTURIZADO · EL LETRERO CENTRADO ALTO, VISIBLE DESDE TODA LA CUADRA DE BUCARELI ·
+  FOQUITOS CÁLIDOS EN TERRAZA · <em>DE NOCHE, LA CASA DESAPARECE Y SOLO QUEDA EL 58.</em></p>
+</section>
+
+<footer>
+  <div class="big rv">EL 58 SE VE<br>DESDE <span class="neon">LEJOS</span>.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>SISTEMA DE IDENTIDAD V1</div>
+    <div>JUL 2026</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

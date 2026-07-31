@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · TAQUERÍA — Taquería nocturna · Morelia</title>
+<meta name="description" content="LA 58 · TAQUERÍA. Taquería nocturna en Bucareli 290, Morelia. El último taco de la noche.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand.css">
+<style>
+  /* ——— hero: la fachada ——— */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 24px 80px;position:relative}
+  .letrero{
+    display:inline-flex;flex-direction:column;align-items:center;gap:0;
+    padding:clamp(28px,5vw,54px) clamp(40px,7vw,90px);
+    border-radius:10px;position:relative;
+  }
+  .letrero .la{font-size:clamp(28px,4vw,52px);letter-spacing:.34em;margin-right:-.34em;color:var(--azulejo)}
+  .letrero .num{font-size:clamp(140px,26vw,330px);line-height:.86}
+  .letrero .taq{
+    font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,1.6vw,15px);
+    letter-spacing:.58em;margin-right:-.58em;color:var(--azulejo);margin-top:18px;text-transform:uppercase;
+  }
+  .hero .tag{margin-top:44px;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--humo)}
+  .hero .tag em{color:var(--rojo-vivo);font-style:normal}
+  .hero .scroll{position:absolute;bottom:26px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.3em;color:var(--humo);text-transform:uppercase}
+
+  /* ——— manifiesto ——— */
+  .manif h2{font-size:clamp(46px,7.5vw,104px)}
+  .manif h2 .n{color:var(--rojo-vivo)}
+  .manif p{color:var(--humo);font-size:15px;line-height:1.85;max-width:640px;margin-top:28px}
+  .manif p b{color:var(--azulejo);font-weight:500}
+
+  /* ——— cuadrante ——— */
+  .quad{display:grid;grid-template-columns:150px 1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em}
+  .quad>div{background:var(--noche);padding:20px 16px;line-height:1.7}
+  .quad .h{color:var(--humo);text-transform:uppercase;font-size:9.5px;letter-spacing:.18em}
+  .quad .vacio{background:var(--noche2);display:flex;align-items:center;justify-content:center}
+  .quad .vacio span{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.05em}
+
+  /* ——— menú ——— */
+  .taco-nombre{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.03em;text-transform:uppercase}
+  .heroe{border:1px solid var(--rojo);background:var(--noche);position:relative}
+  .heroe .badge{position:absolute;top:-1px;right:-1px;background:var(--rojo);color:var(--noche);font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:6px 12px}
+
+  /* ——— paleta ——— */
+  .sw{height:120px;display:flex;align-items:flex-end;padding:14px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+
+  /* ——— casa ——— */
+  .dato{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:16px 0;font-size:13.5px}
+  .dato .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--humo);padding-top:3px;white-space:nowrap}
+  .dato .v{text-align:right;line-height:1.65;color:var(--azulejo)}
+  .dato .v em{color:var(--rojo-vivo);font-style:normal}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="index.html" class="on">La marca</a>
+    <a href="logos.html">Logos</a>
+    <a href="menu.html">Menú</a>
+    <a href="campana.html">Campaña</a>
+    <a href="#casa">La casa</a>
+  </nav>
+</div>
+
+<!-- ═══════════ HERO: EL LETRERO ═══════════ -->
+<div class="hero">
+  <div class="letrero neon-borde parpadea">
+    <div class="la display neon">LA</div>
+    <div class="num display neon">58</div>
+    <div class="taq">TAQUERÍA</div>
+  </div>
+  <div class="tag">BUCARELI 290 · MORELIA — <em>EL ÚLTIMO TACO DE LA NOCHE</em></div>
+  <div class="scroll">▼</div>
+</div>
+
+<div class="marquee"><div class="marquee-inner">
+  TROMPO A LA VISTA <em>·</em> HASTA LAS 3 AM <em>·</em> TORTILLA HECHA A MANO <em>·</em> NOS VEMOS EN LA 58 <em>·</em>
+  TROMPO A LA VISTA <em>·</em> HASTA LAS 3 AM <em>·</em> TORTILLA HECHA A MANO <em>·</em> NOS VEMOS EN LA 58 <em>·</em>
+</div></div>
+
+<!-- ═══════════ MANIFIESTO ═══════════ -->
+<section class="manif">
+  <div class="label">01 — El nombre</div>
+  <h2 class="display rv">MORELIA EMPIEZA<br>CON <span class="n neon">58</span>.</h2>
+  <p class="rv">Todos los códigos postales de esta ciudad empiezan con 58. El 58120 de Altozano,
+  el 58000 del Centro, el 58230 de esta esquina. <b>No somos la taquería de una colonia —
+  somos la taquería de toda la ciudad.</b> La que queda a diez minutos de donde sea que andes,
+  cuando el hambre llega tarde y en serio.</p>
+  <p class="rv"><b>El último taco de la noche se come en LA 58.</b></p>
+</section>
+
+<!-- ═══════════ EL HUECO ═══════════ -->
+<section>
+  <div class="label">02 — Por qué existimos</div>
+  <h2 class="display rv" style="font-size:clamp(34px,5vw,64px);max-width:900px">EN MORELIA NADIE COMBINA ESTÉTICA Y MADRUGADA. NADIE.</h2>
+  <div style="margin-top:40px" class="rv">
+    <div class="quad">
+      <div class="h"></div>
+      <div class="h">CIERRA TEMPRANO</div>
+      <div class="h">MADRUGADA</div>
+      <div class="h">ESTÉTICA CUIDADA</div>
+      <div style="color:var(--humo)">Taquerías fifí de manteles · cadenas de plaza</div>
+      <div class="vacio"><span class="neon">← LA 58</span></div>
+      <div class="h">ESTÉTICA DE LÁMINA</div>
+      <div style="color:var(--humo)">Cientos</div>
+      <div style="color:var(--humo)">Los puestos de siempre</div>
+    </div>
+  </div>
+  <p class="note rv">FUENTE: BARRIDO COMPETITIVO JUL 2026 · 30+ TAQUERÍAS DE MORELIA MAPEADAS · EL CUADRANTE SUPERIOR DERECHO ESTÁ <em>VACÍO</em></p>
+</section>
+
+<!-- ═══════════ EL CÓDIGO ═══════════ -->
+<section>
+  <div class="label">03 — El código de la casa</div>
+  <div class="grid-3">
+    <div class="cell rv"><h3 class="neon">Neón rojo</h3><div class="cap">La única luz con permiso de gritar. El letrero es el logo, el faro y la selfie. <em>Un solo color.</em></div></div>
+    <div class="cell rv"><h3>Fachada oscura</h3><div class="cap">Muro texturizado casi negro. La casa desaparece de noche — <em>solo queda el 58 encendido.</em></div></div>
+    <div class="cell rv"><h3>Cajas de luz</h3><div class="cap">El menú se muestra con fotos retroiluminadas, como en las taquerías que no necesitan explicarse. <em>La foto vende, no el texto.</em></div></div>
+    <div class="cell rv"><h3>Talavera en barra</h3><div class="cap">Azulejo real en la barra: limpieza que se ve y herencia que se toca. <em>Premium de oficio, no de mantel.</em></div></div>
+    <div class="cell rv"><h3>Trompo a la vista</h3><div class="cap">La cocina es el escenario. El taquero es el show. <em>La fila es la publicidad.</em></div></div>
+    <div class="cell rv"><h3>Foquitos y sillas rojas</h3><div class="cap">Terraza con luz cálida colgante y silla metálica roja. <em>Calle elevada, no restaurante disfrazado.</em></div></div>
+  </div>
+</section>
+
+<!-- ═══════════ MENÚ ESTRELLA ═══════════ -->
+<section>
+  <div class="label">04 — Las estrellas del menú</div>
+  <div class="grid-2" style="margin-bottom:1px">
+    <div class="cell heroe rv" style="padding:36px 28px">
+      <div class="badge">EL TACO DE LA CASA</div>
+      <div class="taco-nombre neon">EL VELADOR</div>
+      <div class="cap" style="margin-top:10px">Costra de queso dorada en plancha, pastor del trompo, piña tatemada y salsa de la casa. <em>El que cuida tu noche.</em></div>
+      <div class="precio" style="margin-top:18px">$52 MXN*</div>
+    </div>
+    <div class="cell rv" style="padding:36px 28px">
+      <div class="taco-nombre">LA MADRUGADA</div>
+      <div class="cap" style="margin-top:10px">El combo insignia: 4 tacos del trompo + refresco de vidrio o michelada. <em>Para el bajón, con estilo.</em></div>
+      <div class="precio" style="margin-top:18px">$149 MXN*</div>
+    </div>
+  </div>
+  <div class="grid-4">
+    <div class="cell rv"><div class="taco-nombre">PASTOR</div><div class="precio" style="margin-top:8px">$32*</div></div>
+    <div class="cell rv"><div class="taco-nombre">ASADA</div><div class="precio" style="margin-top:8px">$35*</div></div>
+    <div class="cell rv"><div class="taco-nombre">COSTILLA</div><div class="precio" style="margin-top:8px">$48*</div></div>
+    <div class="cell rv"><div class="taco-nombre">CAMPECHANO</div><div class="precio" style="margin-top:8px">$45*</div></div>
+  </div>
+  <p class="note rv">MENÚ CORTO A PROPÓSITO: <em>3 PROTEÍNAS + 2 ESPECIALIDADES</em>. ASÍ TRABAJAN LAS MEJORES DEL PAÍS.<br>*PRECIOS PROPUESTOS CALIBRADOS AL BARRIO — <em>POR VALIDAR CON COCO</em> CONTRA COSTOS REALES DE INSUMO.</p>
+</section>
+
+<!-- ═══════════ PALETA + TIPOGRAFÍA ═══════════ -->
+<section>
+  <div class="label">05 — Paleta y tipografía</div>
+  <div class="grid-4 rv">
+    <div class="sw" style="background:#0B0B0D;color:#8E8C86;border:1px solid rgba(244,241,232,.13)">NOCHE #0B0B0D</div>
+    <div class="sw" style="background:#F4F1E8;color:#0B0B0D">AZULEJO #F4F1E8</div>
+    <div class="sw" style="background:#FF2B33;color:#0B0B0D">ROJO NEÓN #FF2B33</div>
+    <div class="sw" style="background:#8E8C86;color:#0B0B0D">HUMO #8E8C86</div>
+  </div>
+  <div class="grid-2" style="margin-top:1px">
+    <div class="cell rv">
+      <div class="display" style="font-size:54px">BEBAS NEUE</div>
+      <div class="cap">DISPLAY — la letra del letrero: alta, condensada, de rótulo. Titulares, precios grandes, el 58.</div>
+    </div>
+    <div class="cell rv">
+      <div class="mono" style="font-size:20px;letter-spacing:.1em">IBM PLEX MONO</div>
+      <div class="cap" style="margin-top:10px">META — etiquetas, precios, datos, tickets. La voz de máquina registradora. Cuerpo: <em>INTER</em>.</div>
+    </div>
+  </div>
+  <p class="note rv">REGLA DE ORO: <em>UN SOLO ACENTO</em>. SI ALGO MÁS QUIERE SER ROJO, ALGO MÁS ESTÁ MAL.</p>
+</section>
+
+<!-- ═══════════ LA CASA ═══════════ -->
+<section id="casa">
+  <div class="label">06 — La casa</div>
+  <h2 class="display rv" style="font-size:clamp(34px,5vw,64px)">BUCARELI 290 YA SABE SER FAMOSA.</h2>
+  <p class="rv" style="color:var(--humo);font-size:14.5px;line-height:1.85;max-width:640px;margin-top:22px">
+    Este techo fue Las Ahumadas: 809 reseñas y música en vivo. A 600 metros, Tacos Trifásicos
+    junta a toda la ciudad. Esta calle ya es un pasillo de antojo — solo le faltaba su letrero.
+  </p>
+  <div style="margin-top:40px;max-width:640px" class="rv">
+    <div class="dato"><div class="k">Dirección</div><div class="v">Calle Bucareli #290 · Col. Vasco de Quiroga · Morelia</div></div>
+    <div class="dato"><div class="k">Horario</div><div class="v">Dom–Mié hasta medianoche · <em>Jue–Sáb hasta las 3 AM</em></div></div>
+    <div class="dato"><div class="k">Terraza</div><div class="v">Foquitos, sillas rojas, DJ los sábados</div></div>
+    <div class="dato"><div class="k">Reservas</div><div class="v">464 644 0128</div></div>
+    <div class="dato"><div class="k">Ticket</div><div class="v">$150–250 por persona con bebida</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="big rv">NOS VEMOS<br>EN <span class="neon">LA 58</span>.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>BUCARELI 290 · MORELIA · 58230</div>
+    <div>ABIERTO HASTA LAS 3 AM</div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
