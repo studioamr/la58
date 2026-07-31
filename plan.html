@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · El plan hasta el encendido</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="brand.css">
+<style>
+  section{max-width:1000px}
+  .fase{background:#fff;border:1.5px solid rgba(11,11,13,.13);margin-top:18px;overflow:hidden}
+  .fh{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:20px 24px;border-bottom:1.5px solid rgba(11,11,13,.13);flex-wrap:wrap}
+  .fh .n{font-family:'Bebas Neue',sans-serif;font-size:28px;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+  .fh .meta{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--humo);text-transform:uppercase;text-align:right;line-height:1.9}
+  .fh .meta b{color:var(--rojo)}
+  .tareas{padding:8px 24px 18px}
+  .t{display:grid;grid-template-columns:26px 1fr 90px;gap:12px;padding:11px 0;border-bottom:1px dotted rgba(11,11,13,.22);align-items:baseline;font-size:13.5px}
+  .t:last-child{border:none}
+  .t input{width:17px;height:17px;accent-color:var(--rojo);cursor:pointer}
+  .t .q{line-height:1.6}
+  .t .w{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:var(--humo);text-transform:uppercase;text-align:right}
+  .t.done .q{text-decoration:line-through;color:var(--humo)}
+  .puerta{background:var(--azulejo);color:#F7F5EF;padding:22px 26px;margin-top:18px}
+  .puerta .p{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;color:#FF4048;text-transform:uppercase}
+  .puerta h3{font-family:'Bebas Neue',sans-serif;font-size:30px;text-transform:uppercase;letter-spacing:.03em;margin-top:6px}
+  .puerta p{font-size:13px;line-height:1.8;margin-top:10px;color:#c9c7c1}
+  .puerta p b{color:#FF4048}
+  .prog{position:sticky;top:52px;background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:16px 22px;z-index:50;margin-bottom:8px}
+  .prog .barra{height:20px;background:rgba(11,11,13,.08);position:relative;margin-top:8px}
+  .prog .barra i{position:absolute;left:0;top:0;bottom:0;background:var(--rojo);transition:width .3s}
+  .prog .t2{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--humo)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="landing.html">Inicio</a>
+    <a href="index.html">La marca</a>
+    <a href="menu-mesa.html">Menú</a>
+    <a href="fotos.html">Fotos</a>
+    <a href="empaques.html">Empaques</a>
+    <a href="kit-lanzamiento.html">Kit</a>
+    <a href="reels.html">Reels</a>
+    <a href="campana.html">Campaña</a>
+    <a href="numeros.html">Números</a>
+    <a href="plan.html" class="on">Plan</a>
+  </nav>
+</div>
+
+<section class="page-head">
+  <div class="label">Plan maestro · uso interno</div>
+  <h1 class="display">DE HOY A LA<br>NOCHE DEL <span class="neon">ENCENDIDO</span>.</h1>
+  <p class="sub">Cinco fases con dueño y dos compuertas donde se para todo si algo no cuadra.
+  Las palomitas se guardan en este navegador: ve marcando.</p>
+</section>
+
+<section style="padding-top:10px">
+  <div class="prog">
+    <div class="t2" id="ptxt">0 de 0 tareas</div>
+    <div class="barra"><i id="pbar" style="width:0%"></i></div>
+  </div>
+
+  <!-- FASE 1 -->
+  <div class="fase">
+    <div class="fh"><div class="n">Fase 1 · Validar</div><div class="meta">SEMANA 1–2 · <b>SIN GASTAR</b></div></div>
+    <div class="tareas">
+      <div class="t"><input type="checkbox" data-k="f1a"><span class="q">Enseñarle a Coco la propuesta completa y el menú</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f1b"><span class="q"><b>Noche de prueba de cocina:</b> cocinar EL VELADOR y LA GRINGA, probarlos con 5 personas</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f1c"><span class="q">Costear cada platillo con las facturas reales de insumo</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f1d"><span class="q">Meter los costos reales a la calculadora y ver si el margen aguanta</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f1e"><span class="q">Búsqueda de "LA 58" en IMPI, clase 43</span><span class="w">ANDRÉ</span></div>
+    </div>
+  </div>
+
+  <div class="puerta">
+    <div class="p">COMPUERTA 1</div>
+    <h3>¿Los números dan?</h3>
+    <p>Si con los costos reales el margen queda <b>abajo de 8%</b> o el equilibrio pide más de 100 personas por noche,
+    <b>se para aquí</b> y se ajustan precios o menú antes de gastar un peso. Si da, se sigue.</p>
+  </div>
+
+  <!-- FASE 2 -->
+  <div class="fase">
+    <div class="fh"><div class="n">Fase 2 · Cotizar</div><div class="meta">SEMANA 3–4 · <b>SOLO COTIZAR</b></div></div>
+    <div class="tareas">
+      <div class="t"><input type="checkbox" data-k="f2a"><span class="q"><b>Letrero de neón/LED:</b> 3 cotizaciones (es el de mayor tiempo de entrega, va primero)</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f2b"><span class="q">Pintura y adecuación de fachada: 2 cotizaciones</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f2c"><span class="q">Empaques a una tinta sobre kraft: bolsa, caja, papel, vaso</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f2d"><span class="q">Uniformes: playeras, gorras y delantales con el 58 bordado</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f2e"><span class="q">Vasos de metal grabados y charolas de acero</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f2f"><span class="q">Impresión de menús con QR + lona del apagón</span><span class="w">ANDRÉ</span></div>
+    </div>
+  </div>
+
+  <div class="puerta">
+    <div class="p">COMPUERTA 2</div>
+    <h3>¿La inversión cabe?</h3>
+    <p>Sumar todas las cotizaciones reales y meterlas a la calculadora.
+    Si el <b>payback pasa de 12 meses</b>, se recorta alcance (letrero más chico, menos merch) antes de firmar nada.</p>
+  </div>
+
+  <!-- FASE 3 -->
+  <div class="fase">
+    <div class="fh"><div class="n">Fase 3 · Comprometer</div><div class="meta">SEMANA 5–6 · <b>AQUÍ SE GASTA</b></div></div>
+    <div class="tareas">
+      <div class="t"><input type="checkbox" data-k="f3a"><span class="q"><b>Firmar el convenio</b> André × Coco (quién pone qué, quién cobra qué)</span><span class="w">AMBOS</span></div>
+      <div class="t"><input type="checkbox" data-k="f3b"><span class="q">Anticipo del letrero y confirmar fecha de instalación</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f3c"><span class="q">Pedido de empaques y uniformes (los que más tardan después del letrero)</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f3d"><span class="q">Definir la fecha del encendido y contarla hacia atrás</span><span class="w">AMBOS</span></div>
+      <div class="t"><input type="checkbox" data-k="f3e"><span class="q">Contratar/confirmar al equipo de la noche</span><span class="w">COCO</span></div>
+    </div>
+  </div>
+
+  <!-- FASE 4 -->
+  <div class="fase">
+    <div class="fh"><div class="n">Fase 4 · Construir</div><div class="meta">SEMANA 7–9 · <b>OBRA Y APAGÓN</b></div></div>
+    <div class="tareas">
+      <div class="t"><input type="checkbox" data-k="f4a"><span class="q">Pintar la fachada de negro y colgar la lona <b>"MORELIA EMPIEZA CON 58"</b></span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f4b"><span class="q">Renombrar la cuenta de Instagram a @la58taqueria (sin borrarla)</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f4c"><span class="q">Responder las 76 reseñas viejas de Google</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f4d"><span class="q">Publicar los posts 1 a 6 del kit de lanzamiento</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f4e"><span class="q">Instalar el letrero (sin encender) y probarlo de madrugada</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f4f"><span class="q">Entrenar al equipo con el menú corto y las 5 salsas</span><span class="w">COCO</span></div>
+      <div class="t"><input type="checkbox" data-k="f4g"><span class="q">DMs a creadores de comida de Morelia</span><span class="w">ANDRÉ</span></div>
+    </div>
+  </div>
+
+  <!-- FASE 5 -->
+  <div class="fase">
+    <div class="fh"><div class="n">Fase 5 · Encender</div><div class="meta">SEMANA 10 · <b>LA NOCHE</b></div></div>
+    <div class="tareas">
+      <div class="t"><input type="checkbox" data-k="f5a"><span class="q">Correr el checklist del día del encendido (está en la campaña)</span><span class="w">AMBOS</span></div>
+      <div class="t"><input type="checkbox" data-k="f5b"><span class="q">Grabar y publicar <b>el reel del encendido</b> a las 8:05 PM</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f5c"><span class="q">Actualizar Google Maps: nombre, categoría, horario y fotos</span><span class="w">ANDRÉ</span></div>
+      <div class="t"><input type="checkbox" data-k="f5d"><span class="q">Arrancar el tablero semanal desde la primera noche</span><span class="w">AMBOS</span></div>
+      <div class="t"><input type="checkbox" data-k="f5e"><span class="q">A los 90 días: revisar datos y decidir si el sábado se estira a 5 AM</span><span class="w">AMBOS</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">DOS COMPUERTAS.<br>CERO <span class="neon">SORPRESAS</span>.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>PLAN MAESTRO V1</div>
+    <div>JUL 2026</div>
+  </div>
+</footer>
+
+<script>
+const cbs=[...document.querySelectorAll('.t input')];
+function pinta(){
+  let n=0;
+  cbs.forEach(c=>{c.parentElement.classList.toggle('done',c.checked);if(c.checked)n++});
+  document.getElementById('ptxt').textContent=n+' de '+cbs.length+' tareas hechas';
+  document.getElementById('pbar').style.width=(cbs.length?n/cbs.length*100:0)+'%';
+}
+cbs.forEach(c=>{
+  const k='la58plan_'+c.dataset.k;
+  c.checked=localStorage.getItem(k)==='1';
+  c.addEventListener('change',()=>{localStorage.setItem(k,c.checked?'1':'0');pinta()});
+});
+pinta();
+</script>
+</body>
+</html>

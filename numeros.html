@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · Los números</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="brand.css">
+<style>
+  section{max-width:1000px}
+  .calc{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+  .panel-c{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:26px 28px}
+  .panel-c h3{font-family:'Bebas Neue',sans-serif;font-size:24px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px}
+  .inp{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 0;border-bottom:1px dotted rgba(11,11,13,.2)}
+  .inp label{font-size:12.5px;color:var(--humo);line-height:1.5}
+  .inp input{width:104px;padding:8px 10px;border:1.5px solid rgba(11,11,13,.2);background:#fff;
+    font-family:'IBM Plex Mono',monospace;font-size:14px;text-align:right;color:var(--azulejo)}
+  .inp input:focus{outline:none;border-color:var(--rojo)}
+  .out{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid rgba(11,11,13,.12)}
+  .out .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;color:var(--humo);text-transform:uppercase}
+  .out .v{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:.02em;line-height:1}
+  .out.big .v{font-size:44px;color:var(--rojo)}
+  .out.neg .v{color:#8a8a8a}
+  .barra{height:26px;background:rgba(11,11,13,.08);position:relative;margin-top:8px;overflow:hidden}
+  .barra i{position:absolute;left:0;top:0;bottom:0;background:var(--rojo);transition:width .3s}
+  .barra span{position:absolute;right:8px;top:4px;font-family:'IBM Plex Mono',monospace;font-size:10px;color:var(--azulejo)}
+  table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff}
+  th{background:var(--azulejo);color:#F7F5EF;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;padding:11px 12px;text-align:left;font-weight:400}
+  td{border-bottom:1px solid rgba(11,11,13,.12);padding:11px 12px;font-size:12.5px}
+  td b{color:var(--rojo)}
+  @media(max-width:760px){.calc{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="landing.html">Inicio</a>
+    <a href="index.html">La marca</a>
+    <a href="menu-mesa.html">Menú</a>
+    <a href="fotos.html">Fotos</a>
+    <a href="empaques.html">Empaques</a>
+    <a href="kit-lanzamiento.html">Kit</a>
+    <a href="reels.html">Reels</a>
+    <a href="campana.html">Campaña</a>
+    <a href="numeros.html" class="on">Números</a>
+    <a href="plan.html">Plan</a>
+  </nav>
+</div>
+
+<section class="page-head">
+  <div class="label">Números · uso interno</div>
+  <h1 class="display">¿SALE O NO<br><span class="neon">SALE</span>?</h1>
+  <p class="sub">Calculadora en vivo. Mueve los números de arriba y abajo se recalcula todo:
+  utilidad de la noche, punto de equilibrio y en cuánto se paga el letrero.
+  <b>Los valores que trae son estimados de escritorio — hay que sustituirlos por los reales de Coco.</b></p>
+</section>
+
+<section style="padding-top:10px">
+  <div class="calc">
+    <div class="panel-c">
+      <h3>Lo que entra</h3>
+      <div class="inp"><label>Personas por noche (jue–sáb)</label><input id="pers" type="number" value="90"></div>
+      <div class="inp"><label>Ticket promedio por persona</label><input id="ticket" type="number" value="145"></div>
+      <div class="inp"><label>Noches fuertes al mes (jue–sáb)</label><input id="nfuerte" type="number" value="13"></div>
+      <div class="inp"><label>Personas por noche (dom–mié)</label><input id="pers2" type="number" value="35"></div>
+      <div class="inp"><label>Noches tranquilas al mes</label><input id="ntranq" type="number" value="17"></div>
+      <h3 style="margin-top:24px">Lo que cuesta</h3>
+      <div class="inp"><label>Food cost (% de la venta)</label><input id="fc" type="number" value="32"></div>
+      <div class="inp"><label>Nómina mensual (equipo completo)</label><input id="nomina" type="number" value="85000"></div>
+      <div class="inp"><label>Renta mensual del local</label><input id="renta" type="number" value="28000"></div>
+      <div class="inp"><label>Luz, gas y agua al mes</label><input id="servicios" type="number" value="18000"></div>
+      <div class="inp"><label>Otros gastos fijos (limpieza, apps, etc.)</label><input id="otros" type="number" value="9000"></div>
+      <div class="inp"><label>Marketing al mes</label><input id="mkt" type="number" value="3500"></div>
+      <h3 style="margin-top:24px">La inversión</h3>
+      <div class="inp"><label>Letrero de neón</label><input id="letrero" type="number" value="45000"></div>
+      <div class="inp"><label>Fachada, pintura y obra</label><input id="obra" type="number" value="35000"></div>
+      <div class="inp"><label>Trompo, equipo y mobiliario</label><input id="equipo" type="number" value="60000"></div>
+      <div class="inp"><label>Empaques, uniformes y menús</label><input id="empaq" type="number" value="18000"></div>
+      <div class="inp"><label>Campaña de lanzamiento</label><input id="camp" type="number" value="9350"></div>
+    </div>
+
+    <div class="panel-c">
+      <h3>Lo que sale</h3>
+      <div class="out big"><span class="k">Venta al mes</span><span class="v" id="oVenta">—</span></div>
+      <div class="out"><span class="k">Costo de insumos</span><span class="v" id="oFood">—</span></div>
+      <div class="out"><span class="k">Gastos fijos</span><span class="v" id="oFijos">—</span></div>
+      <div class="out big"><span class="k">Utilidad al mes</span><span class="v" id="oUtil">—</span></div>
+      <div class="out"><span class="k">Margen sobre venta</span><span class="v" id="oMargen">—</span></div>
+
+      <h3 style="margin-top:26px">Punto de equilibrio</h3>
+      <div class="out"><span class="k">Venta mínima al mes</span><span class="v" id="oEqVenta">—</span></div>
+      <div class="out"><span class="k">Personas por noche fuerte</span><span class="v" id="oEqPers">—</span></div>
+      <div class="barra"><i id="barEq" style="width:0%"></i><span id="txtEq"></span></div>
+      <p style="font-size:11.5px;color:var(--humo);line-height:1.7;margin-top:10px">Qué tan lejos está la operación de solo empatar. Mientras más corta la barra, más colchón hay.</p>
+
+      <h3 style="margin-top:26px">La inversión</h3>
+      <div class="out"><span class="k">Inversión total</span><span class="v" id="oInv">—</span></div>
+      <div class="out big"><span class="k">Se paga en</span><span class="v" id="oPayback">—</span></div>
+      <p style="font-size:11.5px;color:var(--humo);line-height:1.7;margin-top:10px">Meses de utilidad para recuperar lo invertido. <b style="color:var(--azulejo)">Menos de 12 meses es sano en restaurantes.</b></p>
+    </div>
+  </div>
+  <p class="note">TODO SE RECALCULA SOLO AL ESCRIBIR. <em>NADA SE GUARDA</em> — SI RECARGAS, VUELVE A LOS VALORES BASE.</p>
+</section>
+
+<section>
+  <div class="label">Los tres escenarios</div>
+  <table>
+    <tr><th>Escenario</th><th>Personas jue–sáb</th><th>Ticket</th><th>Qué significa</th></tr>
+    <tr><td><b>Flojo</b></td><td>60</td><td>$120</td><td>Si la campaña no jala y solo llega el barrio. Se aguanta, no se crece.</td></tr>
+    <tr><td><b>Esperado</b></td><td>90</td><td>$145</td><td>El escenario del plan: terraza llena tres noches y ticket con bebida.</td></tr>
+    <tr><td><b>Bueno</b></td><td>140</td><td>$165</td><td>Si el encendido pega y aparece la fila. Aquí ya se piensa en el sábado hasta las 5.</td></tr>
+  </table>
+  <p class="note">PRUÉBALOS ARRIBA: CAMBIA <em>PERSONAS</em> Y <em>TICKET</em> Y MIRA CÓMO SE MUEVE EL PAYBACK DEL LETRERO.</p>
+</section>
+
+<section>
+  <div class="label">Advertencias honestas</div>
+  <div class="grid-2">
+    <div class="cell"><h3>Son estimados</h3><div class="cap">Los valores base salen de benchmarks públicos y de la auditoría de menú, <em>no del corte de caja de Coco.</em> El primer trabajo es sustituirlos.</div></div>
+    <div class="cell"><h3>La res sube 40% al año</h3><div class="cap">El food cost del bistec y la arrachera es el que más rápido se erosiona. <em>Por eso el trompo es el margen.</em></div></div>
+    <div class="cell"><h3>Falta el IVA y los impuestos</h3><div class="cap">Esta calculadora es de operación, no fiscal. <em>El contador tiene la última palabra.</em></div></div>
+    <div class="cell"><h3>El local ya existe</h3><div class="cap">No hay costo de encontrar lugar ni de arrancar de cero: <em>esa es la ventaja más grande del proyecto.</em></div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">SI NO SALEN<br>LOS <span class="neon">NÚMEROS</span>,<br>NO SALE.</div>
+  <div class="foot-meta">
+    <div>LA 58 · TAQUERÍA</div>
+    <div>CALCULADORA V1 · USO INTERNO</div>
+    <div>JUL 2026</div>
+  </div>
+</footer>
+
+<script>
+const ids=['pers','ticket','nfuerte','pers2','ntranq','fc','nomina','renta','servicios','otros','mkt','letrero','obra','equipo','empaq','camp'];
+const g=id=>parseFloat(document.getElementById(id).value)||0;
+const mx=n=>'$'+Math.round(n).toLocaleString('es-MX');
+function calc(){
+  const ventaFuerte=g('pers')*g('ticket')*g('nfuerte');
+  const ventaTranq=g('pers2')*g('ticket')*g('ntranq');
+  const venta=ventaFuerte+ventaTranq;
+  const food=venta*g('fc')/100;
+  const fijos=g('nomina')+g('renta')+g('servicios')+g('otros')+g('mkt');
+  const util=venta-food-fijos;
+  const margen=venta?util/venta*100:0;
+  const contrib=1-g('fc')/100;
+  const eqVenta=contrib>0?fijos/contrib:0;
+  // personas por noche fuerte necesarias, dejando fijas las noches tranquilas
+  const ventaTranqFija=ventaTranq;
+  const faltante=Math.max(eqVenta-ventaTranqFija,0);
+  const eqPers=(g('ticket')*g('nfuerte'))?faltante/(g('ticket')*g('nfuerte')):0;
+  const inv=g('letrero')+g('obra')+g('equipo')+g('empaq')+g('camp');
+  const payback=util>0?inv/util:0;
+
+  document.getElementById('oVenta').textContent=mx(venta);
+  document.getElementById('oFood').textContent=mx(food);
+  document.getElementById('oFijos').textContent=mx(fijos);
+  const eU=document.getElementById('oUtil');
+  eU.textContent=mx(util); eU.parentElement.classList.toggle('neg',util<=0);
+  document.getElementById('oMargen').textContent=margen.toFixed(1)+'%';
+  document.getElementById('oEqVenta').textContent=mx(eqVenta);
+  document.getElementById('oEqPers').textContent=Math.ceil(eqPers)+' pers.';
+  const pct=venta?Math.min(eqVenta/venta*100,100):0;
+  document.getElementById('barEq').style.width=pct+'%';
+  document.getElementById('txtEq').textContent=Math.round(pct)+'% de la venta solo para empatar';
+  document.getElementById('oInv').textContent=mx(inv);
+  document.getElementById('oPayback').textContent=util>0?payback.toFixed(1)+' meses':'nunca';
+}
+ids.forEach(i=>document.getElementById(i).addEventListener('input',calc));
+calc();
+</script>
+</body>
+</html>
