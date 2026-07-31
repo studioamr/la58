@@ -60,8 +60,9 @@
   /* EQUIPO */
   .equipo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
   .em{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:20px 16px;text-align:center}
-  .em .av{width:76px;height:76px;margin:0 auto 12px;border-radius:50%;background:var(--azulejo);display:flex;align-items:center;justify-content:center;
-    font-family:'Bebas Neue',sans-serif;font-size:30px;color:#FF4048;letter-spacing:.02em}
+  .em{padding:0;overflow:hidden;text-align:left}
+  .em img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:1.5px solid rgba(11,11,13,.13)}
+  .em .eb2{padding:14px 16px 18px}
   .em .en{font-family:'Bebas Neue',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
   .em .er{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:var(--rojo);text-transform:uppercase;margin-top:4px;line-height:1.7}
   .em .eb{font-size:11px;color:var(--humo);line-height:1.6;margin-top:9px}
@@ -255,13 +256,14 @@
 
   <div class="m-sec">
     <div class="m-lbl">07 — LAS SALSAS DE LA CASA</div>
-    <div class="m-sub"><b>Van en la mesa, sin costo.</b> Molcajeteadas cada noche. Tú decides qué tan lejos llegas.</div>
+    <div class="m-sub"><b>Cinco salsas, van en la mesa sin costo.</b> Molcajeteadas cada noche. Tú decides qué tan lejos llegas.</div>
     <div class="picor">
       <h4>MEDIDOR DE PICOR</h4>
       <div style="margin-top:14px">
-        <div class="salsa"><span class="sn">Verde de la casa</span><span class="bar"><i style="width:25%"></i></span><span class="lvl">SUAVE</span></div>
+        <div class="salsa"><span class="sn">De la casa</span><span class="bar"><i style="width:12%"></i></span><span class="lvl">SIN PICOR</span></div>
+        <div class="salsa"><span class="sn">Verde de molcajete</span><span class="bar"><i style="width:30%"></i></span><span class="lvl">SUAVE</span></div>
         <div class="salsa"><span class="sn">Salsa Veladora</span><span class="bar"><i style="width:55%"></i></span><span class="lvl">LA DE TODOS</span></div>
-        <div class="salsa"><span class="sn">Roja tatemada</span><span class="bar"><i style="width:75%"></i></span><span class="lvl">PICA</span></div>
+        <div class="salsa"><span class="sn">Roja tatemada</span><span class="bar"><i style="width:78%"></i></span><span class="lvl">PICA</span></div>
         <div class="salsa"><span class="sn">La de las 3 AM</span><span class="bar"><i style="width:100%"></i></span><span class="lvl">AVISADO</span></div>
       </div>
     </div>
@@ -274,14 +276,14 @@
     <div class="m-lbl">08 — EL EQUIPO DE LA NOCHE</div>
     <div class="m-sub">Ocho personas para que el taco salga igual a las 8 de la noche que a las 3 de la mañana.</div>
     <div class="equipo">
-      <div class="em"><div class="av">NI</div><div class="en">Don Nico</div><div class="er">EL DUEÑO · LA CASA</div><div class="eb">Este techo es suyo desde antes del letrero. Si algo sale mal, lo arregla él.</div></div>
-      <div class="em"><div class="av">DO</div><div class="en">Don Chava</div><div class="er">EL TROMPERO · 22 AÑOS</div><div class="eb">Arma el trompo a las 4 de la tarde y no lo suelta. Nadie corta como él.</div></div>
-      <div class="em"><div class="av">CH</div><div class="en">Doña Chelo</div><div class="er">LA TORTILLA · A MANO</div><div class="eb">Hace la tortilla frente a ti. Si la ves torcida, es que es de verdad.</div></div>
-      <div class="em"><div class="av">TO</div><div class="en">Toño</div><div class="er">LA PLANCHA · EL QUEMADITO</div><div class="eb">Bistec y arrachera son su territorio. La costra del Velador la inventó él.</div></div>
-      <div class="em"><div class="av">LU</div><div class="en">Lupita</div><div class="er">LAS SALSAS · EL MOLCAJETE</div><div class="eb">Muele las cuatro salsas cada noche. La de las 3 AM es receta suya y no la comparte.</div></div>
-      <div class="em"><div class="av">BE</div><div class="en">Beto</div><div class="er">LA BARRA · EL AGUA DEL TURNO</div><div class="eb">Decide el sabor del agua según cómo pinte la noche. Nunca falla el hielo.</div></div>
-      <div class="em"><div class="av">KA</div><div class="en">Karla</div><div class="er">EL SALÓN · LA MEMORIA</div><div class="eb">Se acuerda de tu orden aunque hayas venido una vez. Manda en las mesas.</div></div>
-      <div class="em"><div class="av">KI</div><div class="en">Kike</div><div class="er">EL DJ · SÁBADOS</div><div class="eb">Pone la música que aguanta hasta las 3. Lleva años en esta esquina.</div></div>
+      <div class="em"><img src="fotos/equipo/web/nico.jpg" alt="Don Nico" loading="lazy"><div class="eb2"><div class="en">Don Nico</div><div class="er">EL DUEÑO · LA CASA</div><div class="eb">Este techo es suyo desde antes del letrero. Si algo sale mal, lo arregla él.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/chava.jpg" alt="Don Chava" loading="lazy"><div class="eb2"><div class="en">Don Chava</div><div class="er">EL TROMPERO · 22 AÑOS</div><div class="eb">Arma el trompo a las 4 de la tarde y no lo suelta. Nadie corta como él.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/chelo.jpg" alt="Doña Chelo" loading="lazy"><div class="eb2"><div class="en">Doña Chelo</div><div class="er">LA TORTILLA · A MANO</div><div class="eb">Hace la tortilla frente a ti. Si la ves torcida, es que es de verdad.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/tono.jpg" alt="Toño" loading="lazy"><div class="eb2"><div class="en">Toño</div><div class="er">LA PLANCHA · EL QUEMADITO</div><div class="eb">Bistec y arrachera son su territorio. La costra del Velador la inventó él.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/lupita.jpg" alt="Lupita" loading="lazy"><div class="eb2"><div class="en">Lupita</div><div class="er">LAS SALSAS · EL MOLCAJETE</div><div class="eb">Muele las cinco salsas cada noche. La de las 3 AM es receta suya y no la comparte.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/beto.jpg" alt="Beto" loading="lazy"><div class="eb2"><div class="en">Beto</div><div class="er">LA BARRA · EL AGUA DEL TURNO</div><div class="eb">Decide el sabor del agua según cómo pinte la noche. Nunca falla el hielo.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/karla.jpg" alt="Karla" loading="lazy"><div class="eb2"><div class="en">Karla</div><div class="er">EL SALÓN · LA MEMORIA</div><div class="eb">Se acuerda de tu orden aunque hayas venido una vez. Manda en las mesas.</div></div></div>
+      <div class="em"><img src="fotos/equipo/web/kike.jpg" alt="Kike" loading="lazy"><div class="eb2"><div class="en">Kike</div><div class="er">EL DJ · SÁBADOS</div><div class="eb">Pone la música que aguanta hasta las 3. Lleva años en esta esquina.</div></div></div>
     </div>
   </div>
 </section>

@@ -3,25 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>LA 58 · Campaña — Se enciende el 58</title>
+<title>LA 58 · Campaña de lanzamiento V2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="brand.css">
 <style>
-  .fase{border:1px solid var(--line);padding:38px 32px;position:relative;background:var(--noche)}
-  .fase .num{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:.2em;color:var(--rojo-vivo)}
-  .fase h3{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:.03em;margin-top:8px;text-transform:uppercase}
-  .fase p{color:var(--humo);font-size:13px;line-height:1.8;margin-top:14px}
-  .fase p b{color:var(--azulejo);font-weight:500}
-  .serie{display:flex;gap:14px;align-items:baseline;border-bottom:1px solid var(--line);padding:16px 0}
-  .serie .dia{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;color:var(--rojo-vivo);text-transform:uppercase;white-space:nowrap;min-width:70px}
-  .serie .t{font-family:'Bebas Neue',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
-  .serie .d{color:var(--humo);font-size:12px;line-height:1.7;margin-top:4px}
-  .kpi{text-align:center;padding:34px 16px}
-  .kpi .v{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;color:var(--rojo-vivo)}
-  .kpi .k{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.18em;color:var(--humo);text-transform:uppercase;margin-top:10px;line-height:1.8}
+  section{max-width:1000px}
+  .idx{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:22px 26px;margin-top:24px}
+  .idx a{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--humo);text-decoration:none;margin:5px 16px 5px 0;border-bottom:1px solid transparent}
+  .idx a:hover{color:var(--rojo);border-color:var(--rojo)}
+  .fase{border:1.5px solid rgba(11,11,13,.13);background:#fff;padding:30px 28px}
+  .fase .num{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.18em;color:var(--rojo);text-transform:uppercase}
+  .fase h3{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:.03em;margin-top:8px;text-transform:uppercase}
+  .fase p{color:var(--humo);font-size:13px;line-height:1.8;margin-top:12px}
+  .fase p b{color:var(--azulejo)}
+  .fase.hero{border:2.5px solid var(--rojo)}
+  .fase.hero h3{color:var(--rojo)}
+  table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff}
+  th{background:var(--azulejo);color:#F7F5EF;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;
+    text-transform:uppercase;padding:11px 12px;text-align:left;font-weight:400}
+  td{border-bottom:1px solid rgba(11,11,13,.12);padding:11px 12px;font-size:12.5px;line-height:1.6;vertical-align:top}
+  td b{color:var(--rojo)}
+  .aud{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:24px}
+  .aud .t{font-family:'Bebas Neue',sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:.03em}
+  .aud .w{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.14em;color:var(--rojo);text-transform:uppercase;margin-top:4px}
+  .aud .d{font-size:12.5px;color:var(--humo);line-height:1.7;margin-top:10px}
+  .copy{background:#fff;border-left:4px solid var(--rojo);padding:18px 22px;margin-top:14px}
+  .copy .lbl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;color:var(--rojo);text-transform:uppercase}
+  .copy .tx{font-size:14px;line-height:1.75;margin-top:9px;white-space:pre-line}
+  .copy .tx b{font-weight:600}
+  .kpi{text-align:center;padding:28px 16px;background:#fff}
+  .kpi .v{font-family:'Bebas Neue',sans-serif;font-size:46px;line-height:1;color:var(--rojo)}
+  .kpi .k{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.16em;color:var(--humo);text-transform:uppercase;margin-top:9px;line-height:1.8}
+  .chk{display:flex;gap:12px;align-items:baseline;border-bottom:1px dotted rgba(11,11,13,.25);padding:11px 2px;font-size:13.5px}
+  .chk .b{color:var(--rojo);font-family:'IBM Plex Mono',monospace;font-size:11px}
+  .tot{background:var(--azulejo);color:#F7F5EF;padding:18px 22px;margin-top:16px;display:flex;justify-content:space-between;
+    font-family:'Bebas Neue',sans-serif;font-size:26px;text-transform:uppercase;letter-spacing:.03em}
+  .tot span{color:#FF4048}
 </style>
 </head>
 <body>
@@ -40,75 +61,212 @@
 </div>
 
 <section class="page-head">
-  <div class="label">Plan de lanzamiento</div>
-  <h1 class="display">SE ENCIENDE<br>EL <span class="neon parpadea">58</span>.</h1>
+  <div class="label">Plan de lanzamiento · V2</div>
+  <h1 class="display">SE ENCIENDE<br>EL <span class="neon">58</span>.</h1>
   <p class="sub">Las taquerías top del país no pagan publicidad: la fila, el trompo y el letrero son el marketing.
-  Esta campaña construye el destino nocturno de Morelia en tres fases y noventa noches.</p>
+  Este documento es ejecutable — audiencia, dinero, calendario y textos listos para copiar.</p>
+  <div class="idx">
+    <a href="#municion">01 Munición</a><a href="#quien">02 A quién</a><a href="#fases">03 Las 3 fases</a>
+    <a href="#calendario">04 Calendario</a><a href="#series">05 Series</a><a href="#copys">06 Copys</a>
+    <a href="#resenas">07 Reseñas</a><a href="#presupuesto">08 Presupuesto</a><a href="#tablero">09 Tablero</a><a href="#dia">10 El día</a>
+  </div>
 </section>
 
-<!-- ═══════════ FASES ═══════════ -->
-<section>
-  <div class="label">01 — Las tres fases</div>
+<!-- 01 MUNICIÓN -->
+<section id="municion" style="padding-top:20px">
+  <div class="label">01 — Con qué contamos hoy</div>
   <div class="grid-3">
-    <div class="fase rv">
+    <div class="aud"><div class="t">18 fotos</div><div class="w">LISTAS PARA PUBLICAR</div><div class="d">10 de producto en canon propio, 5 del local, 3 de ambiente. Alcanzan para las primeras 6 semanas de feed.</div></div>
+    <div class="aud"><div class="t">1 reel</div><div class="w">EL DEL ENCENDIDO</div><div class="d">17 s, 9:16. Es EL video del lanzamiento. Faltan 5 guiones más.</div></div>
+    <div class="aud"><div class="t">~390</div><div class="w">SEGUIDORES HEREDADOS</div><div class="d">La cuenta de Iguana Caguama se renombra, no se abandona. Arrancamos con audiencia tibia, no en cero.</div></div>
+  </div>
+  <p class="note">TAMBIÉN EN MANO: <em>76 RESEÑAS 4.3★ EN GOOGLE</em> (SE HEREDAN AL RENOMBRAR EL NEGOCIO) · MENÚ CON QR · EMPAQUES DISEÑADOS · WHATSAPP ACTIVO.</p>
+</section>
+
+<!-- 02 AUDIENCIA -->
+<section id="quien">
+  <div class="label">02 — A quién le hablamos</div>
+  <table>
+    <tr><th>Público</th><th>Quién es</th><th>Dónde lo alcanzamos</th><th>Qué le decimos</th></tr>
+    <tr><td><b>EL BAJÓN</b><br>18–30</td><td>Sale del Centro o de Chapultepec entre 12 y 2. Ya bebió, trae hambre y no quiere que se acabe.</td><td>Instagram y TikTok, <b>viernes y sábado 11 PM–2 AM</b>. Radio 5 km. Interés: vida nocturna de Morelia.</td><td>"Todavía estamos abiertos." Foto del Velador + horario.</td></tr>
+    <tr><td><b>LA CENA</b><br>28–45</td><td>Familias y parejas del oriente. Cenan entre 9 y 11, piden orden para compartir.</td><td>Facebook e Instagram, <b>jueves y domingo 6–9 PM</b>. Radio 3 km de Bucareli.</td><td>"Orden de arrachera para la mesa." Foto de orden + terraza.</td></tr>
+    <tr><td><b>LOS QUE VELAN</b><br>25–55</td><td>Taxistas, enfermeras del turno noche, panaderos, seguridad. Comen a las 3 y son clientela de repetición.</td><td>No es de redes: se gana en la calle. <b>Volanteo en sitios de taxi</b> y con el precio del pastor.</td><td>"Velamos hasta las 3." Trato de gremio entre semana.</td></tr>
+  </table>
+  <p class="note">EL <em>BAJÓN</em> DA VOLUMEN Y FOTOS; <em>LA CENA</em> DA TICKET ALTO; <em>LOS QUE VELAN</em> DAN FRECUENCIA. LOS TRES SE ATIENDEN CON EL MISMO MENÚ CORTO.</p>
+</section>
+
+<!-- 03 FASES -->
+<section id="fases">
+  <div class="label">03 — La gran idea y las tres fases</div>
+  <h2 class="display" style="font-size:clamp(30px,5vw,54px);max-width:820px">EL LOCAL SE APAGA DOS SEMANAS. LUEGO SE ENCIENDE EL 58.</h2>
+  <div class="grid-3" style="margin-top:34px">
+    <div class="fase">
       <div class="num">FASE 0 · 2 SEMANAS ANTES</div>
       <h3>El apagón</h3>
       <p>La fachada se pinta de negro y se tapa todo. Una sola lona: <b>"MORELIA EMPIEZA CON 58."</b><br><br>
-      @iguana_caguama se despide con honestidad y se renombra a <b>@la58taqueria</b> — los seguidores se heredan,
-      no se empieza de cero. Tres posts crípticos. Que la cuadra pregunte.</p>
+      @iguana_caguama se despide con honestidad y se renombra a <b>@la58taqueria</b> — los seguidores y las 76 reseñas se heredan.
+      Tres posts crípticos, cero explicación. Que la cuadra pregunte.</p>
     </div>
-    <div class="fase rv" style="border-color:var(--rojo)">
+    <div class="fase hero">
       <div class="num">FASE 1 · NOCHE 1</div>
-      <h3 class="neon">El encendido</h3>
-      <p><b>El reel ancla: la calle a oscuras → clic → el 58 se enciende por primera vez.</b> Ese video ES el lanzamiento.<br><br>
-      DJ en terraza, tacos de cortesía a los primeros 58, trompo estrenándose, TikTokers de comida de Morelia
-      invitados directo — la historia se cuenta sola.</p>
+      <h3>El encendido</h3>
+      <p><b>El reel ancla: la calle a oscuras, un clic, y el 58 se enciende.</b> Ese video ES el lanzamiento.<br><br>
+      Tacos de cortesía a los primeros 58 · DJ en terraza · trompo estrenándose · creadores de comida invitados directo.
+      Todo el equipo con playera negra. Se graba todo.</p>
     </div>
-    <div class="fase rv">
+    <div class="fase">
       <div class="num">FASE 2 · SEMANAS 1–13</div>
       <h3>Las 90 noches</h3>
-      <p>Contenido serial 4–5 piezas/semana en TikTok + Reels. Todo se graba de noche, el rojo aparece en cada pieza,
-      cero plantillas.<br><br>Google Maps se renombra, se responde <b>toda</b> reseña vieja y se piden nuevas en caja.</p>
+      <p>Contenido serial 4–5 piezas por semana. Todo se graba de noche, el rojo aparece siempre, cero plantillas.<br><br>
+      Se responde <b>toda</b> reseña vieja de Google y se activa el motor de reseñas nuevas. A los 90 días se decide con datos si el sábado se estira a 5 AM.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════ SERIES ═══════════ -->
-<section>
-  <div class="label">02 — Las series de contenido</div>
-  <div class="rv">
-    <div class="serie"><div class="dia">LUNES</div><div><div class="t">El oficio</div><div class="d">Manos: el trompo girando, tortilla hecha a mano, la costra del Velador dorándose. Sonido real de plancha, nada de música de stock.</div></div></div>
-    <div class="serie"><div class="dia">MIÉRCOLES</div><div><div class="t">El barrio</div><div class="d">Serie "calles de oficios": Carpinteros de Paracho, Cobreros de Santa Clara… cierra siempre en Bucareli 290. El taco es nuestro oficio.</div></div></div>
-    <div class="serie"><div class="dia">JUE–SÁB</div><div><div class="t">La madrugada</div><div class="d">La terraza llena, el DJ, la fila, "el último taco" de un cliente real a las 2:47 AM.</div></div></div>
-    <div class="serie"><div class="dia">DOMINGO</div><div><div class="t">La casa habla</div><div class="d">Precios honestos a cámara, por qué menú corto, quién es el taquero. Confianza de barrio.</div></div></div>
-  </div>
-  <p class="note rv">EL MURO SELFIE: EL LETRERO ESTÁ DISEÑADO PARA FOTO. REPOST DIARIO DE UGC · <em>#NOSVEMOSENLA58</em></p>
+<!-- 04 CALENDARIO -->
+<section id="calendario">
+  <div class="label">04 — Calendario de las primeras semanas</div>
+  <table>
+    <tr><th>Semana</th><th>Qué pasa</th><th>Piezas a publicar</th><th>Quién</th></tr>
+    <tr><td><b>−2</b><br>Apagón</td><td>Fachada tapada. Lona puesta. Renombrar la cuenta. Responder reseñas viejas.</td><td>Post de despedida · 3 posts crípticos (lona, tubo apagado, fecha) · 4 stories</td><td>André</td></tr>
+    <tr><td><b>−1</b><br>Intriga</td><td>Se instala el letrero sin encender. Invitaciones por DM a creadores locales. Prueba de cocina con el equipo.</td><td>Teaser del letrero tapado · cuenta regresiva ×3 · reel de 15 s del trompo armándose</td><td>André + Coco</td></tr>
+    <tr><td><b>1</b><br>Encendido</td><td><b>Noche 1.</b> Cortesía a los primeros 58. DJ. Se graba todo.</td><td><b>Reel del encendido</b> · carrusel del menú · 10+ stories en vivo · repost de todo el contenido de clientes</td><td>Todos</td></tr>
+    <tr><td><b>2</b><br>Ritmo</td><td>Arrancan las series fijas. Se pide reseña en caja con el QR.</td><td>El oficio (lu) · el barrio (mi) · la madrugada (vi/sá) · la casa habla (do)</td><td>André</td></tr>
+    <tr><td><b>3</b><br>Prueba</td><td>Primera pauta pagada al público del bajón, viernes y sábado 11 PM–2 AM.</td><td>2 anuncios (Velador / horario) · 1 reel nuevo · repost diario</td><td>André</td></tr>
+    <tr><td><b>4</b><br>Ajuste</td><td>Se lee el tablero: qué serie jaló y qué anuncio bajó el costo por clic. Se dobla lo que funcionó.</td><td>Repetir la serie ganadora · 1 colaboración con creador</td><td>André</td></tr>
+  </table>
 </section>
 
-<!-- ═══════════ KPIS ═══════════ -->
-<section>
-  <div class="label">03 — Metas a 6 meses (honestas)</div>
-  <div class="grid-4">
-    <div class="cell kpi rv"><div class="v">300</div><div class="k">RESEÑAS GOOGLE<br>(HOY: 76)</div></div>
-    <div class="cell kpi rv"><div class="v">5,000</div><div class="k">SEGUIDORES IG<br>(HOY: ~390)</div></div>
-    <div class="cell kpi rv"><div class="v">3</div><div class="k">VIDEOS +50K VISTAS<br>EN TIKTOK</div></div>
-    <div class="cell kpi rv"><div class="v">$150+</div><div class="k">TICKET PROMEDIO<br>POR PERSONA</div></div>
+<!-- 05 SERIES -->
+<section id="series">
+  <div class="label">05 — Las series fijas (los 4 turnos, hechos contenido)</div>
+  <table>
+    <tr><th>Día</th><th>Serie</th><th>Qué se graba</th><th>Formato</th></tr>
+    <tr><td>LUNES</td><td><b>El oficio</b></td><td>Manos: el trompo girando, la tortilla hecha a mano, la costra del Velador dorándose. Sonido real de plancha, sin música.</td><td>Reel 15–20 s</td></tr>
+    <tr><td>MIÉRCOLES</td><td><b>El barrio</b></td><td>Serie "calles de oficios": Carpinteros de Paracho, Cobreros de Santa Clara… siempre cierra en Bucareli 290.</td><td>Carrusel 3 fotos</td></tr>
+    <tr><td>JUE–SÁB</td><td><b>La madrugada</b></td><td>Terraza llena, el DJ, la fila. "El último taco" de un cliente real a las 2:47.</td><td>Stories + 1 reel</td></tr>
+    <tr><td>DOMINGO</td><td><b>La casa habla</b></td><td>Precios honestos a cámara, por qué menú corto, quién es el taquero.</td><td>Reel a cámara</td></tr>
+  </table>
+  <p class="note">EL MURO SELFIE: EL LETRERO ESTÁ HECHO PARA FOTO. REPOST DIARIO DE LO QUE SUBAN LOS CLIENTES · <em>#NOSVEMOSENLA58</em></p>
+</section>
+
+<!-- 06 COPYS -->
+<section id="copys">
+  <div class="label">06 — Kit de copys · listos para copiar y pegar</div>
+
+  <div class="copy"><div class="lbl">POST DE DESPEDIDA (FASE 0)</div><div class="tx">Cinco años en esta esquina.
+Gracias por cada noche.
+
+Lo que sigue es más grande, y abre más tarde.
+Nos vemos pronto, en el mismo lugar.</div></div>
+
+  <div class="copy"><div class="lbl">POST CRÍPTICO · LA LONA</div><div class="tx">Morelia empieza con 58.
+Bucareli 290.</div></div>
+
+  <div class="copy"><div class="lbl">POST DEL ENCENDIDO (NOCHE 1)</div><div class="tx">Ya está encendido.
+
+Trompo a la vista, tortilla hecha a mano y salsas de molcajete.
+Los primeros 58 no pagan.
+
+Bucareli 290. Velamos hasta las 3.</div></div>
+
+  <div class="copy"><div class="lbl">ANUNCIO PAGADO · EL BAJÓN (11 PM–2 AM)</div><div class="tx"><b>Todavía estamos abiertos.</b>
+El último taco de la noche está a diez minutos de donde andas.
+Jue–sáb hasta las 3 AM · Bucareli 290.
+[Ver el menú]</div></div>
+
+  <div class="copy"><div class="lbl">ANUNCIO PAGADO · LA CENA (6–9 PM)</div><div class="tx"><b>Orden de arrachera para la mesa.</b>
+Con cebollitas tatemadas y tortillas hechas a mano. Terraza y lugar para estacionarse.
+Bucareli 290, Vasco de Quiroga.
+[Cómo llegar]</div></div>
+
+  <div class="copy"><div class="lbl">DM A CREADOR DE CONTENIDO LOCAL</div><div class="tx">Qué tal [nombre]. Abrimos LA 58, una taquería nocturna en Bucareli 290 — donde estaba Las Ahumadas.
+
+Nos gustaría que vinieras a probar el Velador (nuestro taco de la casa) antes de abrir al público. Sin compromiso de publicar: si te gusta, lo dices; si no, también.
+
+¿Qué noche te queda bien?</div></div>
+
+  <div class="copy"><div class="lbl">WHATSAPP · RESPUESTA A PEDIDO</div><div class="tx">Va. ¿Para cuántos y a qué hora pasas?
+Te lo dejamos listo para que no hagas fila.</div></div>
+
+  <div class="copy"><div class="lbl">WHATSAPP · RESERVA DE TERRAZA</div><div class="tx">Claro. ¿Cuántos son y a qué hora?
+Te aparto la terraza. Los sábados hay DJ desde las 10.</div></div>
+
+  <div class="copy"><div class="lbl">RESPUESTA A RESEÑA NEGATIVA</div><div class="tx">Gracias por decirlo. Ese taco no salió como sale.
+Si nos das oportunidad, la próxima va de la casa — pregunta por el encargado.</div></div>
+</section>
+
+<!-- 07 RESEÑAS -->
+<section id="resenas">
+  <div class="label">07 — El motor de reseñas (76 → 300)</div>
+  <table>
+    <tr><th>Mecánica</th><th>Cómo funciona</th><th>Costo</th></tr>
+    <tr><td><b>El QR de la cuenta</b></td><td>Cada ticket lleva un QR que abre directo la reseña de Google. Una sola frase: "si te gustó, díselo a Google".</td><td>$0</td></tr>
+    <tr><td><b>Pedir en el momento justo</b></td><td>Se pide cuando el cliente ya dijo "qué bueno está" — nunca al cobrar. Va en el manual del salón.</td><td>$0</td></tr>
+    <tr><td><b>Responder todas</b></td><td>Las 76 viejas y todas las nuevas en menos de 24 h. Google premia la respuesta y el cliente lo nota.</td><td>Tiempo</td></tr>
+    <tr><td><b>Agua de cortesía</b></td><td>Quien enseñe su reseña publicada se lleva un agua del turno. Cuesta unos $6 y vale una estrella pública.</td><td>~$6 c/u</td></tr>
+  </table>
+</section>
+
+<!-- 08 PRESUPUESTO -->
+<section id="presupuesto">
+  <div class="label">08 — Presupuesto de lanzamiento</div>
+  <table>
+    <tr><th>Rubro</th><th>Qué incluye</th><th>Estimado</th></tr>
+    <tr><td>Lona del apagón</td><td>Impresión grande + instalación</td><td>$1,200</td></tr>
+    <tr><td>Tacos de cortesía</td><td>58 personas × 2 tacos a costo (~$9 c/u)</td><td>$1,050</td></tr>
+    <tr><td>Pauta digital</td><td>4 semanas × ~$500, solo viernes y sábado en horario nocturno</td><td>$2,000</td></tr>
+    <tr><td>Creadores locales</td><td>3 invitaciones a consumo, sin pago en efectivo</td><td>$1,500</td></tr>
+    <tr><td>Volanteo de gremio</td><td>500 volantes para sitios de taxi y turnos de noche</td><td>$800</td></tr>
+    <tr><td>DJ noche 1</td><td>La noche del encendido</td><td>$2,500</td></tr>
+    <tr><td>Aguas de cortesía</td><td>~50 en el trimestre, por reseña publicada</td><td>$300</td></tr>
+  </table>
+  <div class="tot"><span>TOTAL DE CAMPAÑA</span><span>$9,350 MXN</span></div>
+  <p class="note">NO INCLUYE EL LETRERO NI LA OBRA (SON <em>INVERSIÓN DE MARCA</em>, VAN EN EL PLAN). ESTIMADOS DE ESCRITORIO — <em>COTIZAR ANTES DE COMPROMETER</em>.</p>
+</section>
+
+<!-- 09 TABLERO -->
+<section id="tablero">
+  <div class="label">09 — Tablero semanal (se llena cada lunes)</div>
+  <div class="grid-3">
+    <div class="cell kpi"><div class="v">300</div><div class="k">RESEÑAS GOOGLE A 6 MESES<br>(HOY: 76)</div></div>
+    <div class="cell kpi"><div class="v">5,000</div><div class="k">SEGUIDORES IG<br>(HOY: ~390)</div></div>
+    <div class="cell kpi"><div class="v">$150+</div><div class="k">TICKET PROMEDIO<br>POR PERSONA</div></div>
   </div>
-  <p class="note rv">A LOS 90 DÍAS: DECIDIR CON DATOS SI EL SÁBADO SE EXTIENDE A <em>5 AM</em>. LA CONSTRUCCIÓN DE UN DESTINO NOCTURNO TOMA <em>6–12 MESES DE CONSTANCIA</em> — ASÍ LO HICIERON TODAS.</p>
+  <table>
+    <tr><th>Métrica</th><th>Dónde se saca</th><th>Meta semanal</th></tr>
+    <tr><td>Personas jue–sáb después de las 11 PM</td><td>Conteo en caja</td><td>Crecer vs. semana pasada</td></tr>
+    <tr><td>Ticket promedio</td><td>Corte de caja</td><td>≥ $150</td></tr>
+    <tr><td>% de tickets con bebida</td><td>Corte de caja</td><td>≥ 85%</td></tr>
+    <tr><td>Reseñas nuevas</td><td>Google Business</td><td>≥ 3</td></tr>
+    <tr><td>Alcance del mejor post</td><td>Instagram</td><td>Superar el récord anterior</td></tr>
+    <tr><td>Mensajes de WhatsApp</td><td>Bandeja</td><td>Todos contestados el mismo día</td></tr>
+  </table>
+</section>
+
+<!-- 10 EL DÍA -->
+<section id="dia">
+  <div class="label">10 — Checklist del día del encendido</div>
+  <div class="chk"><span class="b">□</span><span>Letrero probado <b>la noche anterior</b> — que no falle el encendido en vivo</span></div>
+  <div class="chk"><span class="b">□</span><span>Trompo armado desde las 4 PM · plancha caliente a las 7</span></div>
+  <div class="chk"><span class="b">□</span><span>Las 5 salsas molidas y en la mesa · tortilla lista</span></div>
+  <div class="chk"><span class="b">□</span><span>Todo el equipo con playera negra y delantal del 58</span></div>
+  <div class="chk"><span class="b">□</span><span>Menús en mesa con QR · empaques y bolsas surtidos</span></div>
+  <div class="chk"><span class="b">□</span><span>Cartel de "los primeros 58 no pagan" en la puerta</span></div>
+  <div class="chk"><span class="b">□</span><span>Dos celulares cargados: uno graba el encendido, otro las stories</span></div>
+  <div class="chk"><span class="b">□</span><span>Google Maps actualizado: nombre, categoría, horario y fotos nuevas</span></div>
+  <div class="chk"><span class="b">□</span><span>DJ confirmado y sonido probado antes de las 9</span></div>
+  <div class="chk"><span class="b">□</span><span>Alguien encargado <b>solo</b> de responder DMs y WhatsApp esa noche</span></div>
 </section>
 
 <footer>
-  <div class="big rv">HAY PASTOR. HAY NOCHE.<br>NOS VEMOS EN <span class="neon">LA 58</span>.</div>
+  <div class="big">HAY PASTOR. HAY NOCHE.<br>NOS VEMOS EN <span>LA 58</span>.</div>
   <div class="foot-meta">
     <div>LA 58 · TAQUERÍA</div>
-    <div>CAMPAÑA DE LANZAMIENTO V1</div>
+    <div>CAMPAÑA DE LANZAMIENTO V2</div>
     <div>JUL 2026</div>
   </div>
 </footer>
 
-<script>
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-</script>
 </body>
 </html>
