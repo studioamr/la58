@@ -1,44 +1,61 @@
-# 04 · MENÚ — Corto, perfecto y hasta las 3 AM
+# 04 · MENÚ — Corto, perfecto y hasta las 3 AM (V2, calibrado a la realidad)
 
-*Regla de las grandes: 3–5 proteínas. Michelin llegó con 4 tacos. Menú corto = velocidad, merma baja, perfección.*
+*V2 (30-jul): carta re-estructurada con el benchmark REAL de Morelia premium — el menú de Rappi de
+Taquería El Infierno (taco $42–74, quesadilla $47–67, orden $166–251, frijoles charros $70).
+Los precios en tienda suelen ser ~25-30% menores que Rappi.*
 
-## La carta V1 (precios = PROPUESTA [VALIDAR] contra costos reales de insumo)
+## La carta V2 (precios = PROPUESTA [VALIDAR] contra costos reales)
 
-### Del trompo y la plancha
-| Taco | Precio | Nota |
+### Del trompo
+| | Precio | Nota |
 |---|---|---|
-| Pastor | $32 | Del trompo a la vista, piña, tortilla a mano |
-| Asada | $35 | Bistec sellado al momento |
-| Costilla | $48 | Dorada, deshuesada en plancha |
-| Campechano | $45 | Asada + chorizo |
+| Pastor | $32 | Picado fino con quemadito, piña tatemada, tortilla a mano |
+| **EL VELADOR** | $55 | El taco de la casa: costra de queso dorada bajo el pastor |
 
-### Especialidades de la casa (los nombres propios)
-| Producto | Precio | Qué es |
-|---|---|---|
-| **EL VELADOR** | $52 | El taco de la casa: costra de queso dorada + pastor + piña tatemada + salsa de la casa |
-| **LA MADRUGADA** | $149 | Combo insignia: 4 tacos del trompo + refresco de vidrio o michelada |
+### De la plancha (la línea que Morelia premium de verdad vende)
+| | Precio |
+|---|---|
+| Bistec | $38 |
+| Arrachera — la reina de la casa | $48 |
+| Filete | $48 |
+| Campechano (bistec + chorizo) | $45 |
+
+### Con queso
+Quesadilla (bistec/arrachera) $48/$58 · **LA DIABLA** (doble tortilla de harina + queso fundido + carne) $62/$72
+
+### Órdenes para compartir
+Orden de bistec $145 · Orden de arrachera $185 (ambas con cebollas caramelizadas + tortillas a mano)
+
+### El combo insignia
+**LA MADRUGADA** $149 — 4 tacos del trompo + refresco de vidrio o michelada
 
 ### Para la mesa
-Guacamole de molcajete $75 · Cebollitas y toreados $35 · Frijoles de la olla con Cotija $40
+Guacamole de molcajete $75 · Cebollitas y toreados $35 · Frijoles charros $55
 
 ### Bebida fría (apoyo, no identidad)
-Michelada de la casa $70 · Cerveza nacional $40 · Refresco de vidrio $28 · Agua del día $30
+Michelada $70 · Cerveza $40 · Refresco de vidrio $28 · Agua del día $30
 
-## La lógica de precios
+## El estilo de servicio (canon de las fotos)
 
-- Calibrado a zona NSE D+: base $30–38, especialidad $45–55, **ticket objetivo $150–250 pp con bebida**.
-- Benchmarks Morelia: callejero $18–30 · madrugada actual ~$80/orden con bebida · techo premium local ~$90 pp (Don Pepe).
-- Cobramos un *plus* sobre Trifásicos por ambiente + foto + madrugada; NUNCA precio CDMX ($60+/taco mataría el volumen).
+- Taco servido **ABIERTO** en tortilla de maíz con grasita; carne MATE con quemadito — nada brilloso ni salseado.
+- Plato negro mate o charola con papel encerado. **Salsas de molcajete y cebollas asadas van en la mesa, sin costo.**
+- Porciones honestas. Cero torres de garnish.
 
-## Targets operativos [VALIDAR en campo]
+## Benchmark de precios (fuente: Rappi El Infierno, 30-jul-2026)
 
-- Food cost objetivo: ≤32% combinado (pastor del trompo es el margen; costra/queso sube el food cost del Velador pero sube ticket).
-- Tortilla hecha a mano = estándar no negociable (es el "carnicería propia" de la casa).
-- Merma controlada por menú corto: 4 proteínas, 1 trompo.
-- **Tarea de campo #1:** costear con proveedor real (la misma cocina de Monster Kebabs ya tiene cadena de insumos cárnicos).
+| El Infierno (Rappi) | Precio Rappi | Nuestro equivalente en tienda |
+|---|---|---|
+| Taco de bistec | $42 (desc. de $60) | $38 |
+| Taco de arrachera/filete | $51.80 (desc. de $74) | $48 |
+| Quesadilla | $46.90–55.30 | $48–58 |
+| Diabla | $67.90–75.60 | $62–72 |
+| Orden | $165.90–250.60 | $145–185 |
+| Frijoles charros | $70 | $55 |
 
-## Pendientes de producción
+## Entregables listos
 
-- [ ] Validar precios y receta de EL VELADOR con Coco (cocinarlo una noche de prueba)
-- [ ] Menú PDF imprimible + QR para mesa
-- [ ] Fotos de producto canónicas (Gemini) para cajas de luz + web + delivery apps
+- [x] Carta web: menu.html
+- [x] **Carta imprimible: menu-la58.pdf** (carta tamaño carta, tinta sobre azulejo, con QR)
+- [x] **QR de mesa: assets/qr-menu.png** → apunta a studioamr.github.io/la58/menu.html
+- [ ] Validar precios y recetas con Coco (cocinar EL VELADOR una noche de prueba)
+- [ ] Costear contra insumos reales (misma cadena de proveedores que Monster Kebabs)
