@@ -7,32 +7,34 @@
 <style>
   @page{size:letter;margin:0}
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:#F4F1E8;color:#0B0B0D;font-family:'Inter',sans-serif;width:8.5in;height:11in;padding:.55in .6in;position:relative}
+  body{background:#F4F1E8;color:#0B0B0D;font-family:'Inter',sans-serif;width:8.5in;height:11in;padding:.5in .6in;position:relative}
   .display{font-family:'Bebas Neue',sans-serif;text-transform:uppercase;line-height:.9}
-  .mono{font-family:'IBM Plex Mono',monospace}
-  .head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #0B0B0D;padding-bottom:18px}
-  .letrero{border:2.5px solid #E01F27;border-radius:8px;padding:10px 22px;text-align:center;display:inline-block}
-  .letrero .la{font-size:15px;letter-spacing:.3em;margin-right:-.3em}
-  .letrero .num{font-size:64px;color:#E01F27;line-height:.9}
-  .letrero .taq{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.42em;margin-right:-.42em;margin-top:4px}
-  .head-right{text-align:right;padding-top:6px}
-  .head-right .lema{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.02em}
-  .head-right .meta{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:#6b6a65;margin-top:8px;line-height:1.9;text-transform:uppercase}
-  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 .45in;margin-top:22px}
-  .sec{margin-bottom:16px}
-  .sec h2{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#E01F27;border-bottom:1px solid rgba(11,11,13,.18);padding-bottom:5px;margin-bottom:7px}
-  .it{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:4.5px 0}
-  .it .n{font-family:'Bebas Neue',sans-serif;font-size:16.5px;letter-spacing:.03em;text-transform:uppercase}
-  .it .n small{font-family:'Inter',sans-serif;font-size:8.5px;color:#6b6a65;text-transform:none;letter-spacing:0;display:block;margin-top:1px;font-weight:400}
+  .head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #0B0B0D;padding-bottom:16px}
+  .letrero{border:2.5px solid #E01F27;border-radius:8px;padding:9px 20px;text-align:center;display:inline-block}
+  .letrero .la{font-size:14px;letter-spacing:.3em;margin-right:-.3em}
+  .letrero .num{font-size:58px;color:#E01F27;line-height:.9}
+  .letrero .taq{font-family:'IBM Plex Mono',monospace;font-size:7.5px;letter-spacing:.42em;margin-right:-.42em;margin-top:4px}
+  .head-right{text-align:right;padding-top:4px}
+  .head-right .lema{font-family:'Bebas Neue',sans-serif;font-size:25px}
+  .head-right .meta{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.14em;color:#6b6a65;margin-top:7px;line-height:1.9;text-transform:uppercase}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 .45in;margin-top:18px}
+  .sec{margin-bottom:13px}
+  .sec h2{font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#E01F27;border-bottom:1px solid rgba(11,11,13,.18);padding-bottom:4px;margin-bottom:6px}
+  .it{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:4px 0}
+  .it .n{font-family:'Bebas Neue',sans-serif;font-size:15.5px;letter-spacing:.03em;text-transform:uppercase}
+  .it .n small{font-family:'Inter',sans-serif;font-size:8.2px;color:#6b6a65;text-transform:none;letter-spacing:0;display:block;margin-top:1px;font-weight:400}
   .it .pts{flex:1;border-bottom:1px dotted rgba(11,11,13,.3);transform:translateY(-3px)}
-  .it .p{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500}
+  .it .p{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500}
+  .it.hero{background:#fff;outline:1.5px solid #E01F27;padding:5px 8px;margin:2px -8px}
   .it.hero .n,.it.hero .p{color:#E01F27}
-  .foot{position:absolute;left:.6in;right:.6in;bottom:.5in;display:flex;justify-content:space-between;align-items:flex-end;border-top:3px solid #0B0B0D;padding-top:14px}
-  .foot .big{font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:.95;text-transform:uppercase}
+  .upsell{background:#0B0B0D;color:#F4F1E8;padding:7px 10px;margin-top:6px;font-family:'IBM Plex Mono',monospace;font-size:7.8px;letter-spacing:.12em;text-transform:uppercase}
+  .upsell b{color:#FF4048}
+  .foot{position:absolute;left:.6in;right:.6in;bottom:.45in;display:flex;justify-content:space-between;align-items:flex-end;border-top:3px solid #0B0B0D;padding-top:12px}
+  .foot .big{font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:.95;text-transform:uppercase}
   .foot .big span{color:#E01F27}
   .foot .qr{text-align:center}
-  .foot .qr img{width:1.05in;height:1.05in;display:block}
-  .foot .qr .cap{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.18em;margin-top:4px;text-transform:uppercase}
+  .foot .qr img{width:1in;height:1in;display:block}
+  .foot .qr .cap{font-family:'IBM Plex Mono',monospace;font-size:6.5px;letter-spacing:.18em;margin-top:3px;text-transform:uppercase}
 </style>
 </head>
 <body>
@@ -45,55 +47,57 @@
   </div>
   <div class="head-right">
     <div class="lema">EL ÚLTIMO TACO DE LA NOCHE.</div>
-    <div class="meta">BUCARELI 290 · COL. VASCO DE QUIROGA · MORELIA<br>DOM–MIÉ HASTA MEDIANOCHE · JUE–SÁB HASTA LAS 3 AM<br>RESERVAS 464 644 0128</div>
+    <div class="meta">BUCARELI 290 · COL. VASCO DE QUIROGA · MORELIA<br>DOM–MIÉ HASTA MEDIANOCHE · JUE–SÁB HASTA LAS 3 AM<br>SALSA VELADORA Y CEBOLLAS ASADAS EN LA MESA, SIN COSTO</div>
   </div>
 </div>
 
 <div class="cols">
   <div>
     <div class="sec">
-      <h2>Del trompo</h2>
-      <div class="it"><span class="n">Pastor<small>Picado fino con quemadito y piña tatemada, tortilla a mano</small></span><span class="pts"></span><span class="p">$32</span></div>
-      <div class="it hero"><span class="n">El Velador<small>El taco de la casa: costra de queso dorada bajo el pastor</small></span><span class="pts"></span><span class="p">$55</span></div>
+      <h2>Órdenes — para compartir</h2>
+      <div class="it"><span class="n">Orden de arrachera<small>Cebollas caramelizadas + tortillas a mano — para 3 o más</small></span><span class="pts"></span><span class="p">185</span></div>
+      <div class="it"><span class="n">Orden de bistec<small>Tiras bajo queso fundido + cebollitas tatemadas</small></span><span class="pts"></span><span class="p">145</span></div>
+    </div>
+    <div class="sec">
+      <h2>Del trompo — la casa</h2>
+      <div class="it hero"><span class="n">El Velador<small>El taco de la casa: costra de queso dorada bajo el pastor</small></span><span class="pts"></span><span class="p">55</span></div>
+      <div class="it"><span class="n">Pastor<small>Picado fino con quemadito y piña tatemada, tortilla a mano</small></span><span class="pts"></span><span class="p">32</span></div>
+      <div class="it hero"><span class="n">La Gringa<small>Harina, queso fundido y pastor con piña</small></span><span class="pts"></span><span class="p">58</span></div>
     </div>
     <div class="sec">
       <h2>De la plancha</h2>
-      <div class="it"><span class="n">Bistec</span><span class="pts"></span><span class="p">$38</span></div>
-      <div class="it"><span class="n">Arrachera<small>Tiras selladas con su quemadito — la reina de la casa</small></span><span class="pts"></span><span class="p">$48</span></div>
-      <div class="it"><span class="n">Filete</span><span class="pts"></span><span class="p">$48</span></div>
-      <div class="it"><span class="n">Campechano<small>Bistec + chorizo</small></span><span class="pts"></span><span class="p">$45</span></div>
+      <div class="it"><span class="n">Bistec</span><span class="pts"></span><span class="p">38</span></div>
+      <div class="it"><span class="n">Arrachera<small>Tiras selladas con su quemadito — la reina de la casa</small></span><span class="pts"></span><span class="p">48</span></div>
+      <div class="it"><span class="n">Campechano<small>Bistec + chorizo — el taco que inventó El Villamelón en 1961</small></span><span class="pts"></span><span class="p">45</span></div>
+      <div class="upsell">HAZLO ESPECIAL: <b>+ COSTRA DE QUESO 15</b> · <b>+ TORTILLA DE HARINA 5</b></div>
     </div>
     <div class="sec">
       <h2>Con queso</h2>
-      <div class="it"><span class="n">Quesadilla<small>Bistec / arrachera</small></span><span class="pts"></span><span class="p">$48 / $58</span></div>
-      <div class="it"><span class="n">La Diabla<small>Doble tortilla de harina, queso fundido y carne — bistec / arrachera</small></span><span class="pts"></span><span class="p">$62 / $72</span></div>
-    </div>
-    <div class="sec">
-      <h2>Órdenes — para compartir</h2>
-      <div class="it"><span class="n">Orden de bistec<small>Cebollas caramelizadas + tortillas a mano</small></span><span class="pts"></span><span class="p">$145</span></div>
-      <div class="it"><span class="n">Orden de arrachera</span><span class="pts"></span><span class="p">$185</span></div>
+      <div class="it"><span class="n">Quesadilla<small>Maíz dorado — bistec / arrachera</small></span><span class="pts"></span><span class="p">48 / 58</span></div>
+      <div class="it hero"><span class="n">La Diabla<small>Nuestra pirata regia: doble harina, queso fundido y carne — bistec / arrachera</small></span><span class="pts"></span><span class="p">62 / 72</span></div>
     </div>
   </div>
   <div>
     <div class="sec">
       <h2>El combo insignia</h2>
-      <div class="it hero"><span class="n">La Madrugada<small>4 tacos del trompo + agua de sabor o refresco de vidrio</small></span><span class="pts"></span><span class="p">$149</span></div>
+      <div class="it hero"><span class="n">La Madrugada<small>3 tacos de pastor + 1 El Velador + agua del turno o refresco de vidrio (vale 181 suelto)</small></span><span class="pts"></span><span class="p">149</span></div>
     </div>
     <div class="sec">
       <h2>Para la mesa</h2>
-      <div class="it"><span class="n">Guacamole de molcajete<small>Con totopos de maíz azul</small></span><span class="pts"></span><span class="p">$75</span></div>
-      <div class="it"><span class="n">Cebollitas y toreados</span><span class="pts"></span><span class="p">$35</span></div>
-      <div class="it"><span class="n">Frijoles charros<small>Tocino, chorizo y chile verde</small></span><span class="pts"></span><span class="p">$55</span></div>
+      <div class="it"><span class="n">Frijoles charros<small>Tocino, chorizo y chile verde — de cortesía con órdenes grandes</small></span><span class="pts"></span><span class="p">45</span></div>
+      <div class="it"><span class="n">Papas de la plancha<small>Cambray aplastadas con grasita del trompo</small></span><span class="pts"></span><span class="p">40</span></div>
+      <div class="it"><span class="n">Cebollitas y toreados</span><span class="pts"></span><span class="p">35</span></div>
+      <div class="it"><span class="n">Guacamole de molcajete<small>Con totopos de maíz azul — medio 45</small></span><span class="pts"></span><span class="p">75</span></div>
     </div>
     <div class="sec">
       <h2>Bebida fría</h2>
-      <div class="it"><span class="n">Aguas del día<small>Jamaica u horchata en vaso de metal bien frío</small></span><span class="pts"></span><span class="p">$30</span></div>
-      <div class="it"><span class="n">Refresco de vidrio</span><span class="pts"></span><span class="p">$28</span></div>
-      <div class="it"><span class="n">Cerveza nacional</span><span class="pts"></span><span class="p">$40</span></div>
+      <div class="it hero"><span class="n">Agua del Turno<small>Jamaica u horchata de casa, en vaso de metal bien frío</small></span><span class="pts"></span><span class="p">30</span></div>
+      <div class="it"><span class="n">Refresco de vidrio<small>Coca bien fría, como debe ser</small></span><span class="pts"></span><span class="p">28</span></div>
+      <div class="it"><span class="n">Cerveza nacional</span><span class="pts"></span><span class="p">40</span></div>
     </div>
     <div class="sec">
       <h2>La casa</h2>
-      <div class="it"><span class="n" style="font-family:'Inter',sans-serif;font-size:9px;text-transform:none;letter-spacing:0;line-height:1.8;color:#6b6a65">Salsas de molcajete y cebollas asadas en la mesa, sin costo.<br>Trompo a la vista · tortilla hecha a mano · terraza con DJ los sábados.</span></div>
+      <div class="it"><span class="n" style="font-family:'Inter',sans-serif;font-size:8.5px;text-transform:none;letter-spacing:0;line-height:1.8;color:#6b6a65">Trompo a la vista · tortilla hecha a mano · terraza con DJ los sábados.<br>Todo se sirve en charola de acero. El último taco de la noche se come aquí.</span></div>
     </div>
   </div>
 </div>

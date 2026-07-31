@@ -22,10 +22,15 @@ Sitio vivo: **https://studioamr.github.io/la58/**
 
 | Página | Qué muestra |
 |---|---|
-| [index.html](index.html) | La marca: letrero, manifiesto, el hueco de mercado, código visual, menú estrella, la casa |
+| [index.html](index.html) | La marca: letrero, manifiesto, el hueco de mercado, código visual, menú estrella con fotos, la fachada real |
 | [logos.html](logos.html) | Sistema de identidad: caja de neón, lockups, encendido/apagado, prohibiciones, fachada |
-| [menu.html](menu.html) | La carta V1 completa con precios propuestos |
+| [menu.html](menu.html) | La carta estilo Orinoco: modo claro con foto por platillo (cards tipo Rappi) |
+| [fotos.html](fotos.html) | SET 002 producto (canon Orinoco: charola + azulejo + flash) y SET 001 ambiente (la noche) |
 | [campana.html](campana.html) | Plan de lanzamiento en 3 fases + series de contenido + KPIs |
+
+**Canon de foto de producto** (definido con las referencias de André: feed de @taqueriaorinoco + Rappi El Infierno):
+charola metálica de acero con papel encerado · barra de azulejo blanco · flash directo duro cenital · comida real mate
+con quemadito · cero props. Bebida de la casa: **aguas del día en vaso de metal** (sin micheladas, por decisión del cliente).
 
 ## Decisiones clave
 

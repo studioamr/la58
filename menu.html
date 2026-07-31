@@ -7,9 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
 <link rel="stylesheet" href="brand.css">
 <style>
-  /* ——— MODO CARTA: el menú vive en luz (azulejo) con rojo Orinoco ——— */
+  /* MODO CARTA: azulejo claro + rojo, cards estilo Rappi */
   body{background:#F7F5EF;color:#0B0B0D}
   body::after{opacity:.03}
   .topbar{background:linear-gradient(#F7F5EF 60%,transparent);color:#6b6a65}
@@ -22,32 +23,29 @@
   .page-head .sub{color:#6b6a65}
   .label{color:#E01F27}
   .label::before{background:#E01F27}
-
   .menu-sec{margin-top:56px}
   .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .card{background:#fff;border:1.5px solid rgba(11,11,13,.12);overflow:hidden;display:flex;flex-direction:column}
   .card img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
-  .card .info{padding:16px 18px 18px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .card .info{padding:16px 18px 6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
   .card .nom{font-family:'Bebas Neue',sans-serif;font-size:24px;letter-spacing:.03em;text-transform:uppercase;line-height:1}
-  .card .desc{color:#6b6a65;font-size:11.5px;line-height:1.6;padding:0 18px 16px;margin-top:-6px}
+  .card .desc{color:#6b6a65;font-size:11.5px;line-height:1.6;padding:0 18px 16px}
   .card .p{font-family:'IBM Plex Mono',monospace;font-size:15px;font-weight:500;color:#E01F27;white-space:nowrap}
   .card.hero{border:2px solid #E01F27}
   .card.hero .nom{color:#E01F27}
-
   .fila{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-bottom:1px dotted rgba(11,11,13,.25);padding:13px 2px}
   .fila .nom{font-family:'Bebas Neue',sans-serif;font-size:21px;letter-spacing:.03em;text-transform:uppercase}
-  .fila .nota{color:#6b6a65;font-size:11px;margin-left:8px}
+  .fila .nota{color:#6b6a65;font-size:11px;margin-left:8px;font-family:'Inter',sans-serif;text-transform:none;letter-spacing:0}
   .fila .p{font-family:'IBM Plex Mono',monospace;font-size:14px;font-weight:500;color:#E01F27;white-space:nowrap}
-
+  .upsell{background:#0B0B0D;color:#F7F5EF;padding:14px 18px;margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+  .upsell b{color:#FF4048}
   .aviso-carta{border:1.5px solid rgba(11,11,13,.15);background:#fff;padding:20px 22px;margin-top:60px}
   .aviso-carta .note{color:#6b6a65}
   .aviso-carta .note em{color:#E01F27}
-
   footer{border-top:3px solid #0B0B0D}
   footer .big{color:#0B0B0D}
   footer .big span{color:#E01F27;text-shadow:none}
   .foot-meta{color:#6b6a65}
-
   @media(max-width:860px){.cards{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.cards{grid-template-columns:1fr}}
 </style>
@@ -68,18 +66,28 @@
 <section class="page-head">
   <div class="label">La carta</div>
   <h1 class="display">CORTO, PERFECTO<br>Y HASTA LAS <span class="neon">3 AM</span>.</h1>
-  <p class="sub">Trompo y plancha, a la vista. Todo se sirve en charola de acero sobre la barra de azulejo —
-  salsas de molcajete y cebollas asadas en la mesa, sin costo.</p>
+  <p class="sub">Trompo y plancha, a la vista. Todo se sirve en charola de acero.
+  <b>SALSA VELADORA de molcajete y cebollas asadas en la mesa, sin costo.</b></p>
 </section>
 
 <section style="padding-top:10px">
 
   <div class="menu-sec rv">
-    <div class="label">Del trompo</div>
+    <div class="label">Órdenes — para compartir</div>
     <div class="cards">
-      <div class="card"><img src="fotos/menu/web/p-pastor.jpg" alt="Tacos de pastor"><div class="info"><span class="nom">Pastor</span><span class="p">$32*</span></div><div class="desc">Picado fino con quemadito, piña tatemada, tortilla hecha a mano.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-orden-bistec.jpg" alt="Orden de bistec"><div class="info"><span class="nom">Orden de bistec</span><span class="p">$145*</span></div><div class="desc">Tiras de bistec bajo queso fundido, cebollitas tatemadas y tortillas hechas a mano.</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fila"><span class="nom">Orden de arrachera <span class="nota">con cebollas caramelizadas + tortillas a mano — para 3 o más</span></span><span class="p">$185*</span></div>
+    </div>
+  </div>
+
+  <div class="menu-sec rv">
+    <div class="label">Del trompo — la casa</div>
+    <div class="cards">
       <div class="card hero"><img src="fotos/menu/web/p-velador.jpg" alt="El Velador"><div class="info"><span class="nom">El Velador</span><span class="p">$55*</span></div><div class="desc">El taco de la casa: costra de queso dorada bajo el pastor. El que cuida tu noche.</div></div>
-      <div class="card hero"><img src="fotos/web/03-la-madrugada.jpg" alt="La Madrugada"><div class="info"><span class="nom">La Madrugada</span><span class="p">$149*</span></div><div class="desc">El combo insignia: 4 tacos del trompo + agua de sabor o refresco de vidrio.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-pastor.jpg" alt="Tacos de pastor"><div class="info"><span class="nom">Pastor</span><span class="p">$32*</span></div><div class="desc">Picado fino con quemadito, piña tatemada, tortilla hecha a mano.</div></div>
+      <div class="card hero"><img src="fotos/menu/web/p-gringa.jpg" alt="La Gringa"><div class="info"><span class="nom">La Gringa</span><span class="p">$58*</span></div><div class="desc">Harina, queso fundido y pastor con piña. El formato que inventó la noche.</div></div>
     </div>
   </div>
 
@@ -88,44 +96,54 @@
     <div class="cards">
       <div class="card"><img src="fotos/menu/web/p-bistec.jpg" alt="Taco de bistec"><div class="info"><span class="nom">Bistec</span><span class="p">$38*</span></div><div class="desc">Res picada al momento sobre la plancha, cebolla y cilantro.</div></div>
       <div class="card"><img src="fotos/menu/web/p-arrachera.jpg" alt="Taco de arrachera"><div class="info"><span class="nom">Arrachera</span><span class="p">$48*</span></div><div class="desc">Tiras selladas con su quemadito. La reina de la casa.</div></div>
-      <div class="card"><img src="fotos/menu/web/p-orden-bistec.jpg" alt="Orden de bistec"><div class="info"><span class="nom">Orden de bistec</span><span class="p">$145*</span></div><div class="desc">Tiras de bistec bajo queso fundido, cebollitas tatemadas y tortillas a mano. Para compartir.</div></div>
+      <div class="card"><img src="fotos/menu/web/p-quesadilla.jpg" alt="Quesadilla"><div class="info"><span class="nom">Quesadilla</span><span class="p">$48 / $58*</span></div><div class="desc">Maíz dorado, queso fundido y tu carne: bistec o arrachera.</div></div>
     </div>
     <div style="margin-top:14px">
-      <div class="fila"><span class="nom">Filete <span class="nota">tiras de filete de res, suave y limpio</span></span><span class="p">$48*</span></div>
-      <div class="fila"><span class="nom">Campechano <span class="nota">bistec + chorizo</span></span><span class="p">$45*</span></div>
-      <div class="fila"><span class="nom">Orden de arrachera <span class="nota">con cebollas caramelizadas + tortillas a mano</span></span><span class="p">$185*</span></div>
+      <div class="fila"><span class="nom">Campechano <span class="nota">bistec + chorizo — el taco que inventó El Villamelón en 1961</span></span><span class="p">$45*</span></div>
+    </div>
+    <div class="upsell">HAZLO ESPECIAL: <b>+ COSTRA DE QUESO $15</b> · <b>+ TORTILLA DE HARINA $5</b> — CUALQUIER TACO DE LA PLANCHA</div>
+  </div>
+
+  <div class="menu-sec rv">
+    <div class="label">La pirata de la casa</div>
+    <div class="cards">
+      <div class="card hero"><img src="fotos/menu/web/p-diabla.jpg" alt="La Diabla"><div class="info"><span class="nom">La Diabla</span><span class="p">$62 / $72*</span></div><div class="desc">Nuestra pirata regia: doble tortilla de harina dorada, queso fundido y carne. Bistec o arrachera.</div></div>
     </div>
   </div>
 
   <div class="menu-sec rv">
-    <div class="label">Con queso</div>
+    <div class="label">El combo insignia</div>
     <div class="cards">
-      <div class="card"><img src="fotos/menu/web/p-quesadilla.jpg" alt="Quesadilla"><div class="info"><span class="nom">Quesadilla</span><span class="p">$48 / $58*</span></div><div class="desc">Tortilla de maíz dorada con queso fundido y tu carne: bistec o arrachera.</div></div>
-      <div class="card"><img src="fotos/menu/web/p-diabla.jpg" alt="La Diabla"><div class="info"><span class="nom">La Diabla</span><span class="p">$62 / $72*</span></div><div class="desc">Doble tortilla de harina dorada en plancha, queso fundido y carne. Bistec o arrachera.</div></div>
-      <div class="card"><img src="fotos/menu/web/p-frijoles.jpg" alt="Frijoles charros"><div class="info"><span class="nom">Frijoles charros</span><span class="p">$55*</span></div><div class="desc">Caldosos, con tocino, chorizo y chile verde.</div></div>
+      <div class="card hero"><img src="fotos/web/03-la-madrugada.jpg" alt="La Madrugada"><div class="info"><span class="nom">La Madrugada</span><span class="p">$149*</span></div><div class="desc">3 tacos de pastor + 1 EL VELADOR + agua del turno o refresco de vidrio. Vale $181 suelto — ahorras 18%.</div></div>
+    </div>
+  </div>
+
+  <div class="menu-sec rv">
+    <div class="label">Para la mesa</div>
+    <div class="cards">
+      <div class="card"><img src="fotos/menu/web/p-frijoles.jpg" alt="Frijoles charros"><div class="info"><span class="nom">Frijoles charros</span><span class="p">$45*</span></div><div class="desc">Caldosos, con tocino, chorizo y chile verde. De cortesía con órdenes grandes.</div></div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="fila"><span class="nom">Papas de la plancha <span class="nota">cambray aplastadas con grasita del trompo</span></span><span class="p">$40*</span></div>
+      <div class="fila"><span class="nom">Cebollitas y toreados <span class="nota">al carbón, con limón y sal de grano</span></span><span class="p">$35*</span></div>
+      <div class="fila"><span class="nom">Guacamole de molcajete <span class="nota">con totopos de maíz azul — medio $45</span></span><span class="p">$75*</span></div>
     </div>
   </div>
 
   <div class="menu-sec rv">
     <div class="label">Bebida fría</div>
     <div class="cards">
-      <div class="card"><img src="fotos/menu/web/p-aguas.jpg" alt="Aguas de sabor en vaso de metal"><div class="info"><span class="nom">Aguas del día</span><span class="p">$30*</span></div><div class="desc">Jamaica u horchata hechas en casa, servidas en vaso de metal bien frío.</div></div>
+      <div class="card hero"><img src="fotos/menu/web/p-aguas.jpg" alt="Agua del Turno"><div class="info"><span class="nom">Agua del Turno</span><span class="p">$30*</span></div><div class="desc">Jamaica u horchata hechas en casa, en vaso de metal bien frío. La bebida de la casa.</div></div>
     </div>
     <div style="margin-top:14px">
       <div class="fila"><span class="nom">Refresco de vidrio <span class="nota">coca bien fría, como debe ser</span></span><span class="p">$28*</span></div>
-      <div class="fila"><span class="nom">Cerveza nacional <span class="nota">en su punto de hielo</span></span><span class="p">$40*</span></div>
+      <div class="fila"><span class="nom">Cerveza nacional</span><span class="p">$40*</span></div>
     </div>
   </div>
 
-  <div class="menu-sec rv">
-    <div class="label">Para la mesa</div>
-    <div class="fila"><span class="nom">Guacamole de molcajete <span class="nota">con totopos de maíz azul</span></span><span class="p">$75*</span></div>
-    <div class="fila"><span class="nom">Cebollitas y chiles toreados <span class="nota">al carbón, con limón y sal de grano</span></span><span class="p">$35*</span></div>
-  </div>
-
   <div class="aviso-carta rv">
-    <p class="note" style="margin-top:0">*PRECIOS PROPUESTOS CALIBRADOS A MORELIA (BENCHMARK: LA PREMIUM LOCAL VENDE TACO $42–74 EN RAPPI) —
-    <em>PENDIENTE VALIDAR CON COCO</em> CONTRA COSTOS REALES.<br>
+    <p class="note" style="margin-top:0">*PRECIOS PROPUESTOS — CALIBRADOS CON LA AUDITORÍA DE MENU ENGINEERING (docs/06):
+    BENCHMARK RAPPI EL INFIERNO $42–74/TACO · TICKET OBJETIVO $120–150 P/P · <em>PENDIENTE COSTEO REAL CON COCO</em>.<br>
     CARTA IMPRIMIBLE: <em>menu-la58.pdf</em> · QR DE MESA: <em>assets/qr-menu.png</em></p>
   </div>
 
