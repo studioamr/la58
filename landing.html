@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LA 58 · TAQUERÍA — Bucareli 290, Morelia · Hasta las 3 AM</title>
+<meta name="description" content="Taquería nocturna en Bucareli 290, Morelia. Trompo a la vista, tortilla hecha a mano. Jueves a sábado hasta las 3 AM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
+<style>
+  :root{--rojo:#E01F27;--tinta:#141412;--hueso:#F7F5EF;--humo:#6b6a65}
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;color:var(--tinta);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .display{font-family:'Bebas Neue',sans-serif;text-transform:uppercase;line-height:.88;letter-spacing:.015em}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  /* fondo de azulejo */
+  .azulejo{background-color:#F4F2EC;
+    background-image:linear-gradient(rgba(11,11,13,.06) 2px,transparent 2px),linear-gradient(90deg,rgba(11,11,13,.06) 2px,transparent 2px),linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6));
+    background-size:110px 110px,110px 110px,auto}
+
+  /* BARRA SUPERIOR ROJA */
+  .top{background:var(--rojo);color:#fff;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 22px;
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;position:sticky;top:0;z-index:99;flex-wrap:wrap}
+  .top a{color:#fff;text-decoration:none}
+  .top .n{display:flex;gap:18px;flex-wrap:wrap}
+  .top .n a{opacity:.85}
+  .top .n a:hover{opacity:1}
+
+  /* HERO */
+  .hero{text-align:center;padding:64px 22px 54px;border-bottom:6px solid var(--tinta)}
+  .sello{width:clamp(130px,20vw,190px);margin:0 auto 26px;display:block}
+  .hero h1{font-size:clamp(76px,17vw,190px)}
+  .hero h1 span{color:var(--rojo)}
+  .hero .taq{font-family:'IBM Plex Mono',monospace;font-size:clamp(11px,2vw,16px);letter-spacing:.52em;margin-right:-.52em;margin-top:14px;text-transform:uppercase}
+  .hero .lema{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4.5vw,44px);color:var(--rojo);margin-top:26px;text-transform:uppercase;letter-spacing:.02em}
+  .hero .abre{display:inline-block;border:3px solid var(--tinta);padding:12px 26px;margin-top:26px;font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,3vw,28px);text-transform:uppercase}
+  .hero .abre b{color:var(--rojo)}
+  .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .btn{background:var(--rojo);color:#fff;text-decoration:none;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:15px 26px;display:inline-block;border:3px solid var(--rojo);transition:.15s}
+  .btn:hover{background:var(--tinta);border-color:var(--tinta)}
+  .btn.gh{background:transparent;color:var(--tinta);border-color:var(--tinta)}
+  .btn.gh:hover{background:var(--tinta);color:#fff}
+
+  /* MARQUEE */
+  .mq{background:var(--tinta);color:var(--hueso);overflow:hidden;padding:13px 0;white-space:nowrap}
+  .mq-in{display:inline-block;animation:mq 24s linear infinite;font-family:'Bebas Neue',sans-serif;font-size:23px;letter-spacing:.09em;text-transform:uppercase}
+  .mq-in em{color:#FF4048;font-style:normal;margin:0 20px}
+  @keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* SECCIONES */
+  .sec{max-width:1080px;margin:0 auto;padding:66px 22px}
+  .sec-t{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,7vw,76px);text-transform:uppercase;line-height:.92;text-align:center}
+  .sec-t span{color:var(--rojo)}
+  .sec-s{text-align:center;color:var(--humo);font-size:14px;line-height:1.8;max-width:620px;margin:16px auto 0}
+  .sec-s b{color:var(--tinta)}
+
+  /* PLATILLOS */
+  .platos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+  .plato{background:#fff;border:3px solid var(--tinta);overflow:hidden}
+  .plato img{width:100%;aspect-ratio:1;object-fit:cover;display:block;border-bottom:3px solid var(--tinta)}
+  .plato .pb{padding:16px 18px 20px;text-align:center}
+  .plato .pn{font-family:'Bebas Neue',sans-serif;font-size:30px;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+  .plato .pd{font-size:12px;color:var(--humo);line-height:1.6;margin-top:7px}
+  .plato .pp{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--rojo);margin-top:10px}
+  .plato.star{border-color:var(--rojo)}
+  .plato.star .pn{color:var(--rojo)}
+
+  /* TURNOS (banda oscura) */
+  .turnos-wrap{background:var(--tinta);color:var(--hueso);padding:66px 22px}
+  .turnos-wrap .sec-t{color:var(--hueso)}
+  .turnos-wrap .sec-s{color:#9a9892}
+  .turnos-wrap .sec-s b{color:var(--hueso)}
+  .turnos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(244,241,232,.16);border:1px solid rgba(244,241,232,.16);margin-top:40px;max-width:1080px;margin-left:auto;margin-right:auto}
+  .turno{background:var(--tinta);padding:26px 20px}
+  .turno .h{font-family:'Bebas Neue',sans-serif;font-size:46px;color:#FF4048;line-height:1}
+  .turno .n{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:#9a9892;margin-top:6px}
+  .turno .q{font-size:13px;line-height:1.7;margin-top:14px}
+  .turno .t{font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;margin-top:12px;letter-spacing:.03em}
+
+  /* MANIFIESTO */
+  .manif{text-align:center;max-width:720px;margin:0 auto}
+  .manif p{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,4.4vw,44px);text-transform:uppercase;line-height:1.15;letter-spacing:.01em}
+  .manif p.rojo{color:var(--rojo)}
+  .manif .sep{width:60px;height:4px;background:var(--rojo);margin:24px auto}
+
+  /* LOCAL */
+  .local{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+  .local img{width:100%;height:100%;object-fit:cover;display:block;border:3px solid var(--tinta)}
+  /* DATOS */
+  .datos{max-width:720px;margin:36px auto 0}
+  .dfila{display:flex;justify-content:space-between;gap:16px;border-bottom:2px dotted rgba(11,11,13,.3);padding:15px 2px;font-size:15px;align-items:baseline}
+  .dfila .k{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--humo);white-space:nowrap}
+  .dfila .v{text-align:right;font-weight:500}
+  .dfila .v b{color:var(--rojo)}
+  /* FAQ */
+  .faq{max-width:720px;margin:36px auto 0}
+  .fq{border-bottom:2px solid rgba(11,11,13,.14);padding:18px 2px}
+  .fq .q{font-family:'Bebas Neue',sans-serif;font-size:23px;text-transform:uppercase;letter-spacing:.02em}
+  .fq .a{font-size:13.5px;color:var(--humo);line-height:1.75;margin-top:6px}
+  /* FOOTER */
+  .foot{background:var(--rojo);color:#fff;text-align:center;padding:56px 22px 40px}
+  .foot .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,8vw,88px);text-transform:uppercase;line-height:.95}
+  .foot .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:26px;line-height:2.1;opacity:.9}
+  .foot a{color:#fff}
+  @media(max-width:900px){.platos{grid-template-columns:1fr}.turnos{grid-template-columns:1fr 1fr}.local{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- BARRA -->
+<div class="top">
+  <div><b>LA 58 · TAQUERÍA</b> — BUCARELI 290, MORELIA</div>
+  <nav class="n">
+    <a href="#menu">Menú</a>
+    <a href="#turnos">La noche</a>
+    <a href="#donde">Dónde</a>
+    <a href="menu-mesa.html">Carta completa</a>
+    <a href="https://wa.me/524646440128">WhatsApp</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="hero azulejo">
+  <svg class="sello" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="#141412"/>
+    <rect x="21" y="21" width="158" height="158" rx="18" fill="none" stroke="#E01F27" stroke-width="5"/>
+    <text x="100" y="115" text-anchor="middle" font-family="Bebas Neue, Arial Black" font-size="92" fill="#E01F27">58</text>
+    <text x="100" y="150" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="7" fill="#F7F5EF">TAQUERIA</text>
+  </svg>
+  <h1 class="display">LA <span>58</span></h1>
+  <div class="taq mono">TAQUERÍA</div>
+  <div class="lema">El último taco de la noche.</div>
+  <div class="abre">JUE–SÁB HASTA LAS <b>3 AM</b></div>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/524646440128">PEDIR POR WHATSAPP</a>
+    <a class="btn gh" href="menu-mesa.html">VER EL MENÚ</a>
+  </div>
+</div>
+
+<div class="mq"><div class="mq-in">
+  TROMPO A LA VISTA <em>·</em> TORTILLA HECHA A MANO <em>·</em> SALSAS DE MOLCAJETE <em>·</em> NOS VEMOS EN LA 58 <em>·</em>
+  TROMPO A LA VISTA <em>·</em> TORTILLA HECHA A MANO <em>·</em> SALSAS DE MOLCAJETE <em>·</em> NOS VEMOS EN LA 58 <em>·</em>
+</div></div>
+
+<!-- MENÚ -->
+<div class="sec azulejo" id="menu" style="max-width:none">
+  <div style="max-width:1080px;margin:0 auto">
+    <h2 class="sec-t">LO QUE SE PIDE <span>SIEMPRE</span></h2>
+    <p class="sec-s">Un trompo, una plancha y tortilla hecha a mano. <b>Carta corta a propósito</b> — para que todo salga perfecto a cualquier hora.</p>
+    <div class="platos">
+      <div class="plato star">
+        <img src="fotos/menu/web/p-velador.jpg" alt="El Velador">
+        <div class="pb"><div class="pn">El Velador</div><div class="pd">Costra de queso dorada bajo el pastor. El taco de la casa.</div><div class="pp">$55</div></div>
+      </div>
+      <div class="plato star">
+        <img src="fotos/menu/web/p-gringa.jpg" alt="La Gringa">
+        <div class="pb"><div class="pn">La Gringa</div><div class="pd">Harina, queso fundido y pastor con piña tatemada.</div><div class="pp">$58</div></div>
+      </div>
+      <div class="plato">
+        <img src="fotos/menu/web/p-pastor.jpg" alt="Pastor">
+        <div class="pb"><div class="pn">Pastor</div><div class="pd">Del trompo, picado fino con su quemadito.</div><div class="pp">$32</div></div>
+      </div>
+      <div class="plato">
+        <img src="fotos/menu/web/p-arrachera.jpg" alt="Arrachera">
+        <div class="pb"><div class="pn">Arrachera</div><div class="pd">Tiras selladas al momento. La reina de la plancha.</div><div class="pp">$48</div></div>
+      </div>
+      <div class="plato">
+        <img src="fotos/menu/web/p-orden-bistec.jpg" alt="Orden de bistec">
+        <div class="pb"><div class="pn">Orden de bistec</div><div class="pd">Bajo queso fundido, cebollitas y tortillas a mano. Para compartir.</div><div class="pp">$145</div></div>
+      </div>
+      <div class="plato star">
+        <img src="fotos/menu/web/p-aguas.jpg" alt="Agua del Turno">
+        <div class="pb"><div class="pn">Agua del Turno</div><div class="pd">Jamaica u horchata de casa, en vaso de metal. El sabor cambia con la hora.</div><div class="pp">$30</div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:34px">
+      <a class="btn" href="menu-mesa.html">VER LA CARTA COMPLETA</a>
+    </div>
+  </div>
+</div>
+
+<!-- LOS TURNOS -->
+<div class="turnos-wrap" id="turnos">
+  <h2 class="sec-t">LA NOCHE TIENE <span style="color:#FF4048">TURNOS</span></h2>
+  <p class="sec-s">Aquí no todos llegan a la misma hora. <b>Cada turno tiene su gente y su taco.</b></p>
+  <div class="turnos">
+    <div class="turno"><div class="h">10</div><div class="n">PM · LOS QUE CENAN</div><div class="q">Familias, parejas, el que salió tarde del trabajo.</div><div class="t">Orden para compartir</div></div>
+    <div class="turno"><div class="h">12</div><div class="n">AM · LOS QUE YA SALIERON</div><div class="q">La previa, el cumpleaños, la mesa grande de la terraza.</div><div class="t">La Madrugada</div></div>
+    <div class="turno"><div class="h">1</div><div class="n">AM · LOS DEL BAJÓN</div><div class="q">Post-Centro, post-Chapultepec. Los que no quieren que se acabe.</div><div class="t">El Velador</div></div>
+    <div class="turno"><div class="h">3</div><div class="n">AM · LOS QUE VELAN</div><div class="q">Taxistas, enfermeras, panaderos, insomnes. Los que cuidan la noche.</div><div class="t">Pastor derecho</div></div>
+  </div>
+</div>
+
+<!-- MANIFIESTO -->
+<div class="sec azulejo">
+  <div class="manif">
+    <p>Ya cerró todo.</p>
+    <p>Ya se fue el que se tenía que ir.</p>
+    <p>Y tú sigues aquí.</p>
+    <div class="sep"></div>
+    <p>No hay cantina. No hay cuento.</p>
+    <p>Hay trompo, plancha y tortilla hecha a mano.</p>
+    <p>Y el agua bien fría, en vaso de metal.</p>
+    <div class="sep"></div>
+    <p class="rojo">El último taco de la noche<br>se come en LA 58.</p>
+  </div>
+</div>
+
+<!-- EL LOCAL -->
+<div class="sec" id="donde" style="max-width:none;padding-top:0">
+  <div style="max-width:1080px;margin:0 auto">
+    <h2 class="sec-t">DÓNDE <span>ESTAMOS</span></h2>
+    <p class="sec-s">Bucareli 290, en la Vasco de Quiroga. <b>A diez minutos del Centro y de Chapultepec</b> — la calle que ya es pasillo de antojo.</p>
+    <div class="local">
+      <img src="fotos/web/05-fachada.jpg" alt="La fachada de LA 58 de noche">
+      <img src="fotos/web/11-cocina.jpg" alt="La cocina con el trompo">
+    </div>
+    <div class="datos">
+      <div class="dfila"><span class="k">Dirección</span><span class="v">Calle Bucareli #290 · Col. Vasco de Quiroga</span></div>
+      <div class="dfila"><span class="k">Horario</span><span class="v">Dom–Mié hasta medianoche · <b>Jue–Sáb hasta las 3 AM</b></span></div>
+      <div class="dfila"><span class="k">Pedidos</span><span class="v"><a href="https://wa.me/524646440128" style="color:var(--rojo);text-decoration:none">WhatsApp 464 644 0128</a></span></div>
+      <div class="dfila"><span class="k">Terraza</span><span class="v">Sí — con DJ los sábados</span></div>
+      <div class="dfila"><span class="k">Instagram</span><span class="v">@la58taqueria</span></div>
+    </div>
+    <div style="text-align:center;margin-top:32px">
+      <a class="btn" href="https://wa.me/524646440128">APARTAR MESA POR WHATSAPP</a>
+    </div>
+  </div>
+</div>
+
+<!-- PREGUNTAS -->
+<div class="sec azulejo" style="max-width:none">
+  <div style="max-width:1080px;margin:0 auto">
+    <h2 class="sec-t">LO QUE SIEMPRE <span>PREGUNTAN</span></h2>
+    <div class="faq">
+      <div class="fq"><div class="q">¿Hasta qué hora abren?</div><div class="a">Jueves, viernes y sábado velamos hasta las 3 de la mañana. El resto de la semana, hasta medianoche.</div></div>
+      <div class="fq"><div class="q">¿Tienen terraza?</div><div class="a">Sí, con foquitos y sillas rojas. Los sábados hay DJ. Se puede apartar por WhatsApp.</div></div>
+      <div class="fq"><div class="q">¿Venden cerveza?</div><div class="a">Hay cerveza, pero aquí el protagonista es el taco. Nuestra bebida de la casa es el Agua del Turno, en vaso de metal.</div></div>
+      <div class="fq"><div class="q">¿Se puede pedir para llevar?</div><div class="a">Sí. Pides por WhatsApp, llegas y ya está listo — sin fila. Todo va sellado: bolsa, papel y salsas aparte.</div></div>
+      <div class="fq"><div class="q">¿Las salsas pican mucho?</div><div class="a">Hay cuatro, de suave a "avisado". La de las 3 AM es la más brava y es receta de la casa. Van en la mesa, sin costo.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div class="big">HAY PASTOR.<br>HAY NOCHE.</div>
+  <div class="meta">
+    LA 58 · TAQUERÍA — BUCARELI 290 · COL. VASCO DE QUIROGA · MORELIA<br>
+    <a href="https://wa.me/524646440128">WHATSAPP 464 644 0128</a> · @LA58TAQUERIA · JUE–SÁB HASTA LAS 3 AM
+  </div>
+</div>
+
+</body>
+</html>
