@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<title>LA 58 · Menú para imprimir</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page{size:letter;margin:0}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#F4F1E8;color:#0B0B0D;font-family:'Inter',sans-serif;width:8.5in;height:11in;padding:.55in .6in;position:relative}
+  .display{font-family:'Bebas Neue',sans-serif;text-transform:uppercase;line-height:.9}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .head{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:3px solid #0B0B0D;padding-bottom:18px}
+  .letrero{border:2.5px solid #E01F27;border-radius:8px;padding:10px 22px;text-align:center;display:inline-block}
+  .letrero .la{font-size:15px;letter-spacing:.3em;margin-right:-.3em}
+  .letrero .num{font-size:64px;color:#E01F27;line-height:.9}
+  .letrero .taq{font-family:'IBM Plex Mono',monospace;font-size:8px;letter-spacing:.42em;margin-right:-.42em;margin-top:4px}
+  .head-right{text-align:right;padding-top:6px}
+  .head-right .lema{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:.02em}
+  .head-right .meta{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:#6b6a65;margin-top:8px;line-height:1.9;text-transform:uppercase}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:0 .45in;margin-top:22px}
+  .sec{margin-bottom:16px}
+  .sec h2{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#E01F27;border-bottom:1px solid rgba(11,11,13,.18);padding-bottom:5px;margin-bottom:7px}
+  .it{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:4.5px 0}
+  .it .n{font-family:'Bebas Neue',sans-serif;font-size:16.5px;letter-spacing:.03em;text-transform:uppercase}
+  .it .n small{font-family:'Inter',sans-serif;font-size:8.5px;color:#6b6a65;text-transform:none;letter-spacing:0;display:block;margin-top:1px;font-weight:400}
+  .it .pts{flex:1;border-bottom:1px dotted rgba(11,11,13,.3);transform:translateY(-3px)}
+  .it .p{font-family:'IBM Plex Mono',monospace;font-size:12.5px;font-weight:500}
+  .it.hero .n,.it.hero .p{color:#E01F27}
+  .foot{position:absolute;left:.6in;right:.6in;bottom:.5in;display:flex;justify-content:space-between;align-items:flex-end;border-top:3px solid #0B0B0D;padding-top:14px}
+  .foot .big{font-family:'Bebas Neue',sans-serif;font-size:30px;line-height:.95;text-transform:uppercase}
+  .foot .big span{color:#E01F27}
+  .foot .qr{text-align:center}
+  .foot .qr img{width:1.05in;height:1.05in;display:block}
+  .foot .qr .cap{font-family:'IBM Plex Mono',monospace;font-size:7px;letter-spacing:.18em;margin-top:4px;text-transform:uppercase}
+</style>
+</head>
+<body>
+
+<div class="head">
+  <div class="letrero">
+    <div class="la display">LA</div>
+    <div class="num display">58</div>
+    <div class="taq">TAQUERÍA</div>
+  </div>
+  <div class="head-right">
+    <div class="lema">EL ÚLTIMO TACO DE LA NOCHE.</div>
+    <div class="meta">BUCARELI 290 · COL. VASCO DE QUIROGA · MORELIA<br>DOM–MIÉ HASTA MEDIANOCHE · JUE–SÁB HASTA LAS 3 AM<br>RESERVAS 464 644 0128</div>
+  </div>
+</div>
+
+<div class="cols">
+  <div>
+    <div class="sec">
+      <h2>Del trompo</h2>
+      <div class="it"><span class="n">Pastor<small>Picado fino con quemadito y piña tatemada, tortilla a mano</small></span><span class="pts"></span><span class="p">$32</span></div>
+      <div class="it hero"><span class="n">El Velador<small>El taco de la casa: costra de queso dorada bajo el pastor</small></span><span class="pts"></span><span class="p">$55</span></div>
+    </div>
+    <div class="sec">
+      <h2>De la plancha</h2>
+      <div class="it"><span class="n">Bistec</span><span class="pts"></span><span class="p">$38</span></div>
+      <div class="it"><span class="n">Arrachera<small>Tiras selladas con su quemadito — la reina de la casa</small></span><span class="pts"></span><span class="p">$48</span></div>
+      <div class="it"><span class="n">Filete</span><span class="pts"></span><span class="p">$48</span></div>
+      <div class="it"><span class="n">Campechano<small>Bistec + chorizo</small></span><span class="pts"></span><span class="p">$45</span></div>
+    </div>
+    <div class="sec">
+      <h2>Con queso</h2>
+      <div class="it"><span class="n">Quesadilla<small>Bistec / arrachera</small></span><span class="pts"></span><span class="p">$48 / $58</span></div>
+      <div class="it"><span class="n">La Diabla<small>Doble tortilla de harina, queso fundido y carne — bistec / arrachera</small></span><span class="pts"></span><span class="p">$62 / $72</span></div>
+    </div>
+    <div class="sec">
+      <h2>Órdenes — para compartir</h2>
+      <div class="it"><span class="n">Orden de bistec<small>Cebollas caramelizadas + tortillas a mano</small></span><span class="pts"></span><span class="p">$145</span></div>
+      <div class="it"><span class="n">Orden de arrachera</span><span class="pts"></span><span class="p">$185</span></div>
+    </div>
+  </div>
+  <div>
+    <div class="sec">
+      <h2>El combo insignia</h2>
+      <div class="it hero"><span class="n">La Madrugada<small>4 tacos del trompo + refresco de vidrio o michelada</small></span><span class="pts"></span><span class="p">$149</span></div>
+    </div>
+    <div class="sec">
+      <h2>Para la mesa</h2>
+      <div class="it"><span class="n">Guacamole de molcajete<small>Con totopos de maíz azul</small></span><span class="pts"></span><span class="p">$75</span></div>
+      <div class="it"><span class="n">Cebollitas y toreados</span><span class="pts"></span><span class="p">$35</span></div>
+      <div class="it"><span class="n">Frijoles charros<small>Tocino, chorizo y chile verde</small></span><span class="pts"></span><span class="p">$55</span></div>
+    </div>
+    <div class="sec">
+      <h2>Bebida fría</h2>
+      <div class="it"><span class="n">Michelada de la casa<small>Escarchado sal-chile, mezcla secreta</small></span><span class="pts"></span><span class="p">$70</span></div>
+      <div class="it"><span class="n">Cerveza nacional</span><span class="pts"></span><span class="p">$40</span></div>
+      <div class="it"><span class="n">Refresco de vidrio</span><span class="pts"></span><span class="p">$28</span></div>
+      <div class="it"><span class="n">Agua del día<small>Horchata o jamaica</small></span><span class="pts"></span><span class="p">$30</span></div>
+    </div>
+    <div class="sec">
+      <h2>La casa</h2>
+      <div class="it"><span class="n" style="font-family:'Inter',sans-serif;font-size:9px;text-transform:none;letter-spacing:0;line-height:1.8;color:#6b6a65">Salsas de molcajete y cebollas asadas en la mesa, sin costo.<br>Trompo a la vista · tortilla hecha a mano · terraza con DJ los sábados.</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="foot">
+  <div class="big">NOS VEMOS<br>EN <span>LA 58</span>.</div>
+  <div class="qr">
+    <img src="assets/qr-menu.png" alt="QR del menú">
+    <div class="cap">MENÚ DIGITAL</div>
+  </div>
+</div>
+
+</body>
+</html>
