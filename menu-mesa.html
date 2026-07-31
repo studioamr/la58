@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MENÚ — LA 58 · TAQUERÍA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2712%27 fill=%27%230B0B0D%27/%3E%3Crect x=%274%27 y=%274%27 width=%2756%27 height=%2756%27 rx=%279%27 fill=%27none%27 stroke=%27%23FF2B33%27 stroke-width=%273%27/%3E%3Ctext x=%2732%27 y=%2745%27 font-family=%27Arial Black,Arial%27 font-size=%2728%27 font-weight=%27900%27 fill=%27%23FF2B33%27 text-anchor=%27middle%27%3E58%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="brand.css">
+<style>
+  .carta{max-width:900px;margin:0 auto;padding:0 24px}
+  .panel{padding:0}
+  /* HERO */
+  .m-hero{text-align:center;padding:70px 0 54px;border-bottom:3px solid var(--azulejo);
+    min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .m-hero .sello{width:150px;margin:0 auto 30px}
+  .m-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(64px,15vw,130px);text-transform:uppercase;line-height:.84;letter-spacing:.02em}
+  .m-hero h1 span{color:var(--rojo)}
+  .m-hero .tag{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.3em;color:var(--rojo);text-transform:uppercase;margin-top:22px}
+  .m-hero .sub2{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.2em;color:var(--humo);text-transform:uppercase;margin-top:12px;line-height:2}
+  .m-hero .desde{font-family:'Bebas Neue',sans-serif;font-size:24px;text-transform:uppercase;margin-top:28px;
+    border:2px solid var(--rojo);padding:10px 24px}
+  .m-hero .desde b{color:var(--rojo)}
+  /* SECCIONES */
+  .m-sec{padding:34px 0;border-bottom:1px solid rgba(11,11,13,.14)}
+  .m-lbl{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--rojo);text-transform:uppercase}
+  .m-lbl::before{content:"";display:inline-block;width:22px;height:1px;background:var(--rojo);vertical-align:middle;margin-right:10px}
+  .m-sub{font-size:12.5px;color:var(--humo);margin-top:8px;line-height:1.6;margin-bottom:20px}
+  .m-sub b{color:var(--azulejo)}
+  /* CARDS DE PLATILLO */
+  .kcards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .kcard{background:#fff;border:1.5px solid rgba(11,11,13,.13);overflow:hidden}
+  .kcard img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+  .kcard .kb{padding:16px 18px 18px}
+  .kcard .kn{font-family:'Bebas Neue',sans-serif;font-size:27px;text-transform:uppercase;letter-spacing:.03em;line-height:1}
+  .kcard .kd{font-size:12px;color:var(--humo);line-height:1.65;margin-top:6px}
+  .kcard .kp{font-family:'IBM Plex Mono',monospace;font-size:17px;color:var(--rojo);font-weight:500;margin-top:12px}
+  .kcard.star{border:2.5px solid var(--rojo)}
+  .kcard.star .kn{color:var(--rojo)}
+  .kcard .badge{background:var(--rojo);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;padding:5px 12px;display:inline-block}
+  /* FILAS */
+  .row{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-bottom:1px dotted rgba(11,11,13,.25);padding:13px 2px}
+  .row .rn{font-family:'Bebas Neue',sans-serif;font-size:21px;text-transform:uppercase;letter-spacing:.03em}
+  .row .rd{font-size:11.5px;color:var(--humo);margin-left:8px}
+  .row .rp{font-family:'IBM Plex Mono',monospace;font-size:14px;color:var(--rojo);font-weight:500;white-space:nowrap}
+  /* MEDIDOR DE PICOR */
+  .picor{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:22px 24px;margin-top:20px}
+  .picor h4{font-family:'Bebas Neue',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+  .salsa{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px dotted rgba(11,11,13,.2)}
+  .salsa:last-child{border:none}
+  .salsa .sn{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;min-width:140px}
+  .bar{flex:1;height:8px;background:rgba(11,11,13,.09);position:relative}
+  .bar i{position:absolute;left:0;top:0;bottom:0;background:var(--rojo)}
+  .salsa .lvl{font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:var(--humo);min-width:58px;text-align:right}
+  /* UPSELL */
+  .upsell{background:var(--azulejo);color:#F7F5EF;padding:15px 20px;margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+  .upsell b{color:#FF4048}
+  /* EQUIPO */
+  .equipo{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .em{background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:20px 16px;text-align:center}
+  .em .av{width:76px;height:76px;margin:0 auto 12px;border-radius:50%;background:var(--azulejo);display:flex;align-items:center;justify-content:center;
+    font-family:'Bebas Neue',sans-serif;font-size:30px;color:#FF4048;letter-spacing:.02em}
+  .em .en{font-family:'Bebas Neue',sans-serif;font-size:22px;text-transform:uppercase;letter-spacing:.03em}
+  .em .er{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.14em;color:var(--rojo);text-transform:uppercase;margin-top:4px;line-height:1.7}
+  .em .eb{font-size:11px;color:var(--humo);line-height:1.6;margin-top:9px}
+  /* DELIVERY */
+  .dgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .dv{background:#fff;border:1.5px solid rgba(11,11,13,.13);overflow:hidden}
+  .dv img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+  .dv .dvc{padding:14px 16px}
+  .dv .dvn{font-family:'Bebas Neue',sans-serif;font-size:20px;text-transform:uppercase;letter-spacing:.03em}
+  .dv .dvd{font-size:11.5px;color:var(--humo);line-height:1.6;margin-top:5px}
+  /* CIERRE */
+  .cierre{text-align:center;padding:56px 0 20px}
+  .cierre .big{font-family:'Bebas Neue',sans-serif;font-size:clamp(38px,7vw,74px);text-transform:uppercase;line-height:.95}
+  .cierre .big span{color:var(--rojo)}
+  .cierre .meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.16em;color:var(--humo);text-transform:uppercase;margin-top:22px;line-height:2.1}
+  .qrbox{display:inline-block;background:#fff;border:1.5px solid rgba(11,11,13,.13);padding:16px;margin-top:26px}
+  .qrbox img{width:130px;height:130px;display:block}
+  .qrbox .qc{font-family:'IBM Plex Mono',monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;margin-top:9px;color:var(--humo)}
+  @media(max-width:760px){.kcards{grid-template-columns:1fr}.equipo{grid-template-columns:1fr 1fr}.dgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div><b>LA 58</b> <span class="dot">·</span> TAQUERÍA</div>
+  <nav class="nav">
+    <a href="index.html">La marca</a>
+    <a href="logos.html">Logos</a>
+    <a href="menu-mesa.html" class="on">Menú</a>
+    <a href="fotos.html">Fotos</a>
+    <a href="empaques.html">Empaques</a>
+    <a href="campana.html">Campaña</a>
+  </nav>
+</div>
+
+<div class="carta">
+
+<!-- ══════ PANEL 1 · PORTADA ══════ -->
+<section class="panel">
+  <div class="m-hero">
+    <svg class="sello" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="10" width="180" height="180" rx="26" fill="#141412"/>
+      <rect x="22" y="22" width="156" height="156" rx="19" fill="none" stroke="#E01F27" stroke-width="4"/>
+      <text x="100" y="112" text-anchor="middle" font-family="Bebas Neue, Arial Black" font-size="86" fill="#E01F27">58</text>
+      <text x="100" y="146" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" letter-spacing="7" fill="#F7F5EF">TAQUERIA</text>
+    </svg>
+    <h1>LA <span>58</span></h1>
+    <div class="tag">EL ÚLTIMO TACO DE LA NOCHE.</div>
+    <div class="sub2">BUCARELI 290 · MORELIA<br>JUE–SÁB HASTA LAS 3 AM</div>
+    <div class="desde">TACOS DESDE <b>$32</b></div>
+  </div>
+</section>
+
+<!-- ══════ PANEL 2 · DEL TROMPO ══════ -->
+<section class="panel">
+  <div class="m-sec">
+    <div class="m-lbl">01 — DEL TROMPO · A LA VISTA TODA LA NOCHE</div>
+    <div class="m-sub">Un solo trompo, tres formas de comerlo. <b>Tortilla hecha a mano</b>, piña tatemada y quemadito de plancha.</div>
+    <div class="kcards">
+      <div class="kcard star">
+        <img src="fotos/menu/web/p-velador.jpg" alt="El Velador" loading="lazy">
+        <div class="kb">
+          <div class="badge">EL TACO DE LA CASA</div>
+          <div class="kn" style="margin-top:8px">El Velador</div>
+          <div class="kd">Costra de queso dorada bajo el pastor. El que cuida tu noche.</div>
+          <div class="kp">$55</div>
+        </div>
+      </div>
+      <div class="kcard star">
+        <img src="fotos/menu/web/p-gringa.jpg" alt="La Gringa" loading="lazy">
+        <div class="kb">
+          <div class="badge">CON HARINA</div>
+          <div class="kn" style="margin-top:8px">La Gringa</div>
+          <div class="kd">Harina, queso fundido y pastor con piña. El formato que inventó la noche.</div>
+          <div class="kp">$58</div>
+        </div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/menu/web/p-pastor.jpg" alt="Pastor" loading="lazy">
+        <div class="kb">
+          <div class="kn">Pastor</div>
+          <div class="kd">Picado fino con quemadito, piña tatemada, cebolla y cilantro.</div>
+          <div class="kp">$32</div>
+        </div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/web/04-el-trompo.jpg" alt="El trompo" loading="lazy">
+        <div class="kb">
+          <div class="kn">Media orden de trompo</div>
+          <div class="kd">Para la mesa: pastor con piña y tortillas aparte. Para 2 o 3.</div>
+          <div class="kp">$125</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PANEL 3 · PLANCHA Y QUESO ══════ -->
+<section class="panel">
+  <div class="m-sec">
+    <div class="m-lbl">02 — DE LA PLANCHA · RES AL MOMENTO</div>
+    <div class="m-sub">Carne picada frente a ti. <b>Nada se prepara antes de que la pidas.</b></div>
+    <div class="kcards">
+      <div class="kcard">
+        <img src="fotos/menu/web/p-bistec.jpg" alt="Bistec" loading="lazy">
+        <div class="kb"><div class="kn">Bistec</div><div class="kd">Res picada al momento, cebolla y cilantro.</div><div class="kp">$38</div></div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/menu/web/p-arrachera.jpg" alt="Arrachera" loading="lazy">
+        <div class="kb"><div class="kn">Arrachera</div><div class="kd">Tiras selladas con su quemadito. La reina de la casa.</div><div class="kp">$48</div></div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="row"><span class="rn">Campechano <span class="rd">bistec + chorizo — el taco que inventó El Villamelón en 1961</span></span><span class="rp">$45</span></div>
+    </div>
+    <div class="upsell">HAZLO ESPECIAL: <b>+ COSTRA DE QUESO $15</b> · <b>+ TORTILLA DE HARINA $5</b> — EN CUALQUIER TACO DE LA PLANCHA</div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-lbl">03 — CON QUESO · LO QUE SE COMPARTE</div>
+    <div class="m-sub">Queso fundido, plancha y tortilla dorada. <b>Se piden para el centro de la mesa.</b></div>
+    <div class="kcards">
+      <div class="kcard">
+        <img src="fotos/menu/web/p-quesadilla.jpg" alt="Quesadilla" loading="lazy">
+        <div class="kb"><div class="kn">Quesadilla</div><div class="kd">Maíz dorado con queso fundido y tu carne: bistec o arrachera.</div><div class="kp">$48 / $58</div></div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/menu/web/p-orden-bistec.jpg" alt="Orden de bistec" loading="lazy">
+        <div class="kb"><div class="kn">Orden de bistec</div><div class="kd">Tiras bajo queso fundido, cebollitas tatemadas y tortillas a mano.</div><div class="kp">$145</div></div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="row"><span class="rn">Orden de arrachera <span class="rd">con cebollas caramelizadas + tortillas a mano — para 3 o más</span></span><span class="rp">$185</span></div>
+    </div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-lbl">04 — EL COMBO DE LA CASA</div>
+    <div class="m-sub">La forma más barata de probar el taco insignia.</div>
+    <div style="border:2.5px solid var(--rojo);background:#fff;padding:26px 28px;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+      <div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:.03em;color:var(--rojo);line-height:1">LA MADRUGADA</div>
+        <div style="color:var(--humo);font-size:12.5px;line-height:1.7;margin-top:8px;max-width:520px">3 tacos de pastor + 1 EL VELADOR + agua del turno o refresco de vidrio.<br>Vale $181 suelto — <b style="color:var(--azulejo)">ahorras 18%</b>.</div>
+      </div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:500;color:var(--rojo)">$149</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PANEL 4 · MESA, BEBIDAS, SALSAS ══════ -->
+<section class="panel">
+  <div class="m-sec">
+    <div class="m-lbl">05 — PARA LA MESA</div>
+    <div class="m-sub">Lo que llega antes de los tacos. <b>Pídelo apenas te sientes.</b></div>
+    <div class="kcards">
+      <div class="kcard">
+        <img src="fotos/menu/web/p-frijoles.jpg" alt="Frijoles charros" loading="lazy">
+        <div class="kb"><div class="kn">Frijoles charros</div><div class="kd">Caldosos, con tocino, chorizo y chile verde. De cortesía con órdenes grandes.</div><div class="kp">$45</div></div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/menu/web/p-diabla.jpg" alt="Papas de la plancha" loading="lazy">
+        <div class="kb"><div class="kn">Papas de la plancha</div><div class="kd">Cambray aplastadas con la grasita del trompo. Lo que nadie deja.</div><div class="kp">$40</div></div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <div class="row"><span class="rn">Cebollitas y toreados <span class="rd">al carbón, con limón y sal de grano</span></span><span class="rp">$35</span></div>
+      <div class="row"><span class="rn">Guacamole de molcajete <span class="rd">con totopos de maíz azul — medio $45</span></span><span class="rp">$75</span></div>
+    </div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-lbl">06 — BEBIDA FRÍA · SIN CANTINA</div>
+    <div class="m-sub">Aquí el protagonista es el taco. <b>El agua del turno se sirve en vaso de metal</b> — se mantiene fría hasta el último trago.</div>
+    <div class="kcards">
+      <div class="kcard star">
+        <img src="fotos/menu/web/p-aguas.jpg" alt="Agua del Turno" loading="lazy">
+        <div class="kb">
+          <div class="badge">LA BEBIDA DE LA CASA</div>
+          <div class="kn" style="margin-top:8px">Agua del Turno</div>
+          <div class="kd">Jamaica u horchata hechas en casa. El sabor cambia con el turno de la noche.</div>
+          <div class="kp">$30</div>
+        </div>
+      </div>
+      <div class="kcard">
+        <img src="fotos/web/12-empaques.jpg" alt="Para llevar" loading="lazy">
+        <div class="kb"><div class="kn">Refresco de vidrio</div><div class="kd">Bien frío, como debe ser. Cerveza nacional $40.</div><div class="kp">$28</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="m-sec">
+    <div class="m-lbl">07 — LAS SALSAS DE LA CASA</div>
+    <div class="m-sub"><b>Van en la mesa, sin costo.</b> Molcajeteadas cada noche. Tú decides qué tan lejos llegas.</div>
+    <div class="picor">
+      <h4>MEDIDOR DE PICOR</h4>
+      <div style="margin-top:14px">
+        <div class="salsa"><span class="sn">Verde de la casa</span><span class="bar"><i style="width:25%"></i></span><span class="lvl">SUAVE</span></div>
+        <div class="salsa"><span class="sn">Salsa Veladora</span><span class="bar"><i style="width:55%"></i></span><span class="lvl">LA DE TODOS</span></div>
+        <div class="salsa"><span class="sn">Roja tatemada</span><span class="bar"><i style="width:75%"></i></span><span class="lvl">PICA</span></div>
+        <div class="salsa"><span class="sn">La de las 3 AM</span><span class="bar"><i style="width:100%"></i></span><span class="lvl">AVISADO</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PANEL 5 · EQUIPO ══════ -->
+<section class="panel">
+  <div class="m-sec">
+    <div class="m-lbl">08 — EL EQUIPO DE LA NOCHE</div>
+    <div class="m-sub">Ocho personas para que el taco salga igual a las 8 de la noche que a las 3 de la mañana.</div>
+    <div class="equipo">
+      <div class="em"><div class="av">CO</div><div class="en">Coco</div><div class="er">EL DUEÑO · LA CASA</div><div class="eb">Este techo es suyo desde antes del letrero. Si algo sale mal, lo arregla él.</div></div>
+      <div class="em"><div class="av">DO</div><div class="en">Don Chava</div><div class="er">EL TROMPERO · 22 AÑOS</div><div class="eb">Arma el trompo a las 4 de la tarde y no lo suelta. Nadie corta como él.</div></div>
+      <div class="em"><div class="av">MA</div><div class="en">Mari</div><div class="er">LA TORTILLA · A MANO</div><div class="eb">Hace la tortilla frente a ti. Si la ves torcida, es que es de verdad.</div></div>
+      <div class="em"><div class="av">TO</div><div class="en">Toño</div><div class="er">LA PLANCHA · EL QUEMADITO</div><div class="eb">Bistec y arrachera son su territorio. La costra del Velador la inventó él.</div></div>
+      <div class="em"><div class="av">LU</div><div class="en">Lupita</div><div class="er">LAS SALSAS · EL MOLCAJETE</div><div class="eb">Muele las cuatro salsas cada noche. La de las 3 AM es receta suya y no la comparte.</div></div>
+      <div class="em"><div class="av">BE</div><div class="en">Beto</div><div class="er">LA BARRA · EL AGUA DEL TURNO</div><div class="eb">Decide el sabor del agua según cómo pinte la noche. Nunca falla el hielo.</div></div>
+      <div class="em"><div class="av">SO</div><div class="en">Sofi</div><div class="er">EL SALÓN · LA MEMORIA</div><div class="eb">Se acuerda de tu orden aunque hayas venido una vez. Manda en las mesas.</div></div>
+      <div class="em"><div class="av">KI</div><div class="en">Kike</div><div class="er">EL DJ · SÁBADOS</div><div class="eb">Pone la música que aguanta hasta las 3. Lleva años en esta esquina.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PANEL 6 · CONTACTO Y DELIVERY ══════ -->
+<section class="panel">
+  <div class="m-sec">
+    <div class="m-lbl">09 — TE LO LLEVAMOS</div>
+    <div class="m-sub">Pide por WhatsApp para recoger, o por app a domicilio. <b>Va sellado</b>: bolsa kraft con el sello,
+    tacos en su papel y salsas aparte en tarrina. Llega caliente y armable.</div>
+    <div class="dgrid">
+      <div class="dv">
+        <img src="fotos/web/12-empaques.jpg" alt="El empaque" loading="lazy">
+        <div class="dvc"><div class="dvn">El empaque</div><div class="dvd">bolsa con sello, papel encerado y vaso — el local viaja contigo</div></div>
+      </div>
+      <div class="dv">
+        <img src="fotos/web/11-cocina.jpg" alt="La cocina" loading="lazy">
+        <div class="dvc"><div class="dvn">Recoger en barra</div><div class="dvd">pides por WhatsApp, llegas y ya está — sin fila</div></div>
+      </div>
+    </div>
+    <div style="margin-top:18px">
+      <div class="row"><span class="rn">WhatsApp <span class="rd">pedidos y reservas de mesa</span></span><span class="rp">464 644 0128</span></div>
+      <div class="row"><span class="rn">Dirección <span class="rd">Col. Vasco de Quiroga · a 10 min del Centro</span></span><span class="rp">BUCARELI 290</span></div>
+      <div class="row"><span class="rn">Horario <span class="rd">dom–mié hasta medianoche</span></span><span class="rp">JUE–SÁB 3 AM</span></div>
+      <div class="row"><span class="rn">Instagram <span class="rd">lo que pasa cada noche</span></span><span class="rp">@LA58TAQUERIA</span></div>
+    </div>
+  </div>
+
+  <div class="cierre">
+    <div class="big">HAY PASTOR. HAY NOCHE.<br>NOS VEMOS EN <span>LA 58</span>.</div>
+    <div class="qrbox">
+      <img src="assets/qr-menu.png" alt="QR del menú digital">
+      <div class="qc">MENÚ DIGITAL · FOTOS DE TODO</div>
+    </div>
+    <div class="meta">*PRECIOS SUJETOS A VALIDACIÓN FINAL CON COSTOS DE INSUMO<br>
+    SALSAS Y CEBOLLAS ASADAS EN LA MESA, SIN COSTO · TORTILLA HECHA A MANO</div>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
